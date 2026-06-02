@@ -19,20 +19,22 @@ See **`build/README-LocalSourceGenerators.md`**.
 
 | Project | Description |
 |---------|-------------|
-| **Observables.Samples.Events** | Console (`net8.0`) — placeholder entry point; full Events R3 walkthrough in `Observables.Samples.Events/README.md` (local analyzer wiring until NuGet ships). |
+| **Observables.Samples.Events** | Classic CLR events → R3 (`Events()`, `EventHandlers()`). See project `README.md`. |
+| **Observables.Samples.RestAPI** | Declarative REST client (`Task` + `Observable<T>`) with MockHttp. See project `README.md`. |
 
-More samples (RoutedEvents, RestAPI, SignalR, …) will be added as those domains stabilize.
+## Build and run
 
-## Build
-
-Requires **.NET 8 SDK** (and **.NET 10 SDK** when samples target `net10.0`).
+Requires **.NET 8 SDK**.
 
 ```powershell
 # With ../Observables checked out (recommended)
 dotnet build Observables.Samples.slnx
 
-# CI also checks out Observables next to this repo (see .github/workflows/build.yml)
+dotnet run --project Observables.Samples.Events
+dotnet run --project Observables.Samples.RestAPI
 ```
+
+Without a sibling Observables repo, samples build a stub `Program.cs` that prints setup instructions (`LOCAL_OBSERVABLES` not defined).
 
 ## Documentation
 
