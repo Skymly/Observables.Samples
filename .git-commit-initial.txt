@@ -1,0 +1,5 @@
+Initial Observables.Samples repository scaffold
+
+1、Add solution, Directory.Build.props for sibling Observables detection, and Events sample placeholder.
+
+2、Add build workflow, README, AGENTS.md, and MIT license.

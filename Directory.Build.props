@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <!-- Sibling clone: ../Observables (same parent folder as this repo). -->
+    <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
+    <ObservablesLocalAvailable Condition="Exists('$(ObservablesRepoRoot)/Observables.slnx')">true</ObservablesLocalAvailable>
+    <UseLocalObservables Condition="'$(UseLocalObservables)' == '' and '$(ObservablesLocalAvailable)' == 'true'">true</UseLocalObservables>
+    <UseLocalObservables Condition="'$(UseLocalObservables)' == ''">false</UseLocalObservables>
+    <ObservablesEventsR3Generator>$(ObservablesRepoRoot)/Observables.Events.R3.SourceGenerators/Observables.Events.R3.SourceGenerators.csproj</ObservablesEventsR3Generator>
+    <ObservablesSharedProject>$(ObservablesRepoRoot)/Observables.SourceGenerators.Shared/Observables.SourceGenerators.Shared.csproj</ObservablesSharedProject>
+  </PropertyGroup>
+</Project>

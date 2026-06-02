@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Observables.Samples.Events</RootNamespace>
+    <Description>Console sample for Observables.Events R3 generator (local sibling or future NuGet).</Description>
+  </PropertyGroup>
+
+</Project>
