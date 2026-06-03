@@ -20,6 +20,6 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Build and run CI samples via Nuke (skips Avalonia Routed)
-        run: ./build.cmd Ci --configuration Release
+        run: dotnet run --project build/_build.csproj -- --target Ci --configuration Release
         env:
           UseLocalObservables: "false"
