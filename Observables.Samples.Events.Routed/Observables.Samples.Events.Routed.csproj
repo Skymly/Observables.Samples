@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Observables.Samples.Events.Routed</RootNamespace>
+    <ObservablesSampleKind>Events</ObservablesSampleKind>
+    <ObservableRoutedEvents>true</ObservableRoutedEvents>
+    <AssemblyName>Observables.Samples.Events.Routed</AssemblyName>
+    <ObservablesExcludeFromCi>true</ObservablesExcludeFromCi>
+    <Description>Avalonia desktop sample for Observables.Events routed event wrappers (local run only; skipped in CI).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+  </ItemGroup>
+
+</Project>

@@ -8,8 +8,9 @@ This repository contains **sample apps only**. Do not add source generators or l
 
 - **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.0-preview1`) via `Observables.Events.R3` / `Observables.RestAPI.R3` on nuget.org.
 - **Optional sibling**: `../Observables` with `-p:UseLocalObservables=true` for generator work.
-- Build: `dotnet build Observables.Samples.slnx` from the repo root.
-- CI builds and runs samples with **`UseLocalObservables=false`** (no Observables checkout).
+- Build: `dotnet build Observables.Samples.slnx` or `./build.cmd Ci` from the repo root.
+- CI uses **Nuke** `./build.cmd Ci` with **`UseLocalObservables=false`** (no Observables checkout).
+- **`Observables.Samples.Events.Routed`** (Avalonia) is **skipped on server/CI** builds; run locally with a graphical environment.
 
 ## Language
 
