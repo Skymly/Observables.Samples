@@ -9,7 +9,10 @@
 
     <ObservablesSharedProject>$(ObservablesRepoRoot)/Observables.Shared/Observables.SourceGenerators.Shared/Observables.SourceGenerators.Shared.csproj</ObservablesSharedProject>
     <ObservablesEventsR3Generator>$(ObservablesRepoRoot)/Observables.Events/Observables.Events.R3.SourceGenerators/Observables.Events.R3.SourceGenerators.csproj</ObservablesEventsR3Generator>
+    <ObservablesEventsReactiveGenerator>$(ObservablesRepoRoot)/Observables.Events/Observables.Events.Reactive.SourceGenerators/Observables.Events.Reactive.SourceGenerators.csproj</ObservablesEventsReactiveGenerator>
     <ObservablesRestApiRuntime>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI/Observables.RestAPI.csproj</ObservablesRestApiRuntime>
+    <ObservablesRestApiReactiveRuntime>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive/Observables.RestAPI.Reactive.csproj</ObservablesRestApiReactiveRuntime>
     <ObservablesRestApiR3Generator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.R3.SourceGenerators/Observables.RestAPI.R3.SourceGenerators.csproj</ObservablesRestApiR3Generator>
+    <ObservablesRestApiReactiveGenerator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive.SourceGenerators/Observables.RestAPI.Reactive.SourceGenerators.csproj</ObservablesRestApiReactiveGenerator>
   </PropertyGroup>
 </Project>

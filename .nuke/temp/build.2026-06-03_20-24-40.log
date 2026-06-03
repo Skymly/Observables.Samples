@@ -1,0 +1,120 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | Ci                   | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" build C:\Code\Skymly\Observables.Samples\Observables.Samples.Events\Observables.Samples.Events.csproj --configuration Release --property:UseLocalObservables=false
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   |   正在确定要还原的项目…
+D | Ci                   |   所有项目均是最新的，无法还原。
+D | Ci                   |   Observables.Samples.Events -> C:\Code\Skymly\Observables.Samples\Observables.Samples.Events\bin\Release\net8.0\Observables.Samples.Events.dll
+D | Ci                   | 
+D | Ci                   | 已成功生成。
+D | Ci                   |     0 个警告
+D | Ci                   |     0 个错误
+D | Ci                   | 
+D | Ci                   | 已用时间 00:00:01.26
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" run --project C:\Code\Skymly\Observables.Samples\Observables.Samples.Events\Observables.Samples.Events.csproj --configuration Release --no-restore --no-build
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   | Observables.Samples.Events — R3 classic event wrappers
+D | Ci                   | Package mode: Observables.Events.R3 0.1.0-preview1 (nuget.org)
+D | Ci                   | 
+D | Ci                   | -- Events(): Action -> Observable<Unit> --
+D | Ci                   |   Click
+D | Ci                   | -- Events(): Action<T> -> Observable<T> --
+D | Ci                   |   Count = 1
+D | Ci                   |   Count = 2
+D | Ci                   | 
+D | Ci                   | -- EventHandlers(): EventHandler -> Observable<(object? sender, EventArgs e)> --
+D | Ci                   |   SampleChanged sender=SampleNotifier
+D | Ci                   | 
+D | Ci                   | -- Multiple subscribers on Events().CountChanged --
+D | Ci                   |   subscriber A: 10
+D | Ci                   |   subscriber B: 10
+D | Ci                   |   subscriber A: 11
+D | Ci                   |   subscriber B: 11
+D | Ci                   | 
+D | Ci                   | Done.
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" build C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI\Observables.Samples.RestAPI.csproj --configuration Release --property:UseLocalObservables=false
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   |   正在确定要还原的项目…
+D | Ci                   |   所有项目均是最新的，无法还原。
+D | Ci                   |   Observables.Samples.RestAPI -> C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI\bin\Release\net8.0\Observables.Samples.RestAPI.dll
+D | Ci                   | 
+D | Ci                   | 已成功生成。
+D | Ci                   |     0 个警告
+D | Ci                   |     0 个错误
+D | Ci                   | 
+D | Ci                   | 已用时间 00:00:01.18
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" run --project C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI\Observables.Samples.RestAPI.csproj --configuration Release --no-restore --no-build
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   | Observables.Samples.RestAPI — declarative HTTP (Task + R3 Observable)
+D | Ci                   | Package mode: Observables.RestAPI.R3 0.1.0-preview1 (nuget.org)
+D | Ci                   | 
+D | Ci                   | -- Task<User> --
+D | Ci                   |   GET /users/42 -> Ada (id=42)
+D | Ci                   | -- Observable<User> (FirstAsync) --
+D | Ci                   |   GET /users/7 -> Grace (id=7)
+D | Ci                   | -- Task<IReadOnlyList<User>> --
+D | Ci                   |   GET /users -> 2 item(s): Ann, Bob
+D | Ci                   | -- ApiException on 404 (Task) --
+D | Ci                   |   GET /users/404 -> ApiException status=404
+D | Ci                   | 
+D | Ci                   | Done.
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" build C:\Code\Skymly\Observables.Samples\Observables.Samples.Events.Reactive\Observables.Samples.Events.Reactive.csproj --configuration Release --property:UseLocalObservables=false
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   |   正在确定要还原的项目…
+D | Ci                   |   所有项目均是最新的，无法还原。
+D | Ci                   |   Observables.Samples.Events.Reactive -> C:\Code\Skymly\Observables.Samples\Observables.Samples.Events.Reactive\bin\Release\net8.0\Observables.Samples.Events.Reactive.dll
+D | Ci                   | 
+D | Ci                   | 已成功生成。
+D | Ci                   |     0 个警告
+D | Ci                   |     0 个错误
+D | Ci                   | 
+D | Ci                   | 已用时间 00:00:01.20
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" run --project C:\Code\Skymly\Observables.Samples\Observables.Samples.Events.Reactive\Observables.Samples.Events.Reactive.csproj --configuration Release --no-restore --no-build
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   | Observables.Samples.Events.Reactive — IObservable from classic events
+D | Ci                   | 
+D | Ci                   |   Click
+D | Ci                   |   Count = 1
+D | Ci                   |   Count = 2
+D | Ci                   | 
+D | Ci                   | Done.
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" build C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI.Reactive\Observables.Samples.RestAPI.Reactive.csproj --configuration Release --property:UseLocalObservables=false
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   |   正在确定要还原的项目…
+D | Ci                   |   所有项目均是最新的，无法还原。
+D | Ci                   |   Observables.Samples.RestAPI.Reactive -> C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI.Reactive\bin\Release\net8.0\Observables.Samples.RestAPI.Reactive.dll
+D | Ci                   | 
+D | Ci                   | 已成功生成。
+D | Ci                   |     0 个警告
+D | Ci                   |     0 个错误
+D | Ci                   | 
+D | Ci                   | 已用时间 00:00:01.17
+I | Ci                   | > "C:\Program Files\dotnet\dotnet.exe" run --project C:\Code\Skymly\Observables.Samples\Observables.Samples.RestAPI.Reactive\Observables.Samples.RestAPI.Reactive.csproj --configuration Release --no-restore --no-build
+V | Ci                   | @ C:\Code\Skymly\Observables.Samples
+D | Ci                   | Observables.Samples.RestAPI.Reactive — IObservable HTTP client
+D | Ci                   | 
+D | Ci                   | -- IObservable<User> (FirstAsync) --
+D | Ci                   |   GET /users/7 -> Grace (id=7)
+D | Ci                   | -- ApiException on 404 (IObservable) --
+D | Ci                   |   GET /users/404 -> ApiException status=404
+D | Ci                   | 
+D | Ci                   | Done.
+V | Ci                   | Telemetry.OnTargetSucceeded (0)
+V | Ci                   | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V |                      | UpdateNotification.OnBuildFinished (10)
+V |                      | SerializeBuildServerState.OnBuildFinished (0)
+V |                      | EventInvoker.OnBuildFinished (-3.4028235E+38)

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Observables.Samples.RestAPI.Reactive</RootNamespace>
+    <ObservablesSampleKind>RestAPIReactive</ObservablesSampleKind>
+    <Description>Console sample for Observables.RestAPI.Reactive (IObservable HTTP client).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Observables.Samples.RestAPI\Models\*.cs" Link="Models\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
