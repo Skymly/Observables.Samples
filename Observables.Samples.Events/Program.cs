@@ -1,11 +1,14 @@
-namespace Observables.Samples.Events;
+using Observables.Samples.Events.Demos;
 
-internal static class Program
-{
-    private static void Main()
-    {
-        Console.WriteLine("Observables.Samples.Events");
-        Console.WriteLine("See README.md in this project folder for the Events R3 walkthrough.");
-        Console.WriteLine("Local analyzer wiring: ../Observables sibling + build/README-LocalSourceGenerators.md");
-    }
-}
+Console.WriteLine("Observables.Samples.Events — R3 classic event wrappers");
+Console.WriteLine(Observables.Samples.Events.SampleMetadata.Describe());
+Console.WriteLine();
+
+ClassicEventsDemo.Run();
+Console.WriteLine();
+EventHandlersDemo.Run();
+Console.WriteLine();
+SharedEventStreamDemo.Run();
+
+Console.WriteLine();
+Console.WriteLine("Done.");

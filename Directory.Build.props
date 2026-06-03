@@ -1,11 +1,15 @@
 <Project>
   <PropertyGroup>
-    <!-- Sibling clone: ../Observables (same parent folder as this repo). -->
+    <ObservablesPackageVersion>0.1.0-preview1</ObservablesPackageVersion>
+
+    <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
     <ObservablesLocalAvailable Condition="Exists('$(ObservablesRepoRoot)/Observables.slnx')">true</ObservablesLocalAvailable>
-    <UseLocalObservables Condition="'$(UseLocalObservables)' == '' and '$(ObservablesLocalAvailable)' == 'true'">true</UseLocalObservables>
     <UseLocalObservables Condition="'$(UseLocalObservables)' == ''">false</UseLocalObservables>
-    <ObservablesEventsR3Generator>$(ObservablesRepoRoot)/Observables.Events.R3.SourceGenerators/Observables.Events.R3.SourceGenerators.csproj</ObservablesEventsR3Generator>
-    <ObservablesSharedProject>$(ObservablesRepoRoot)/Observables.SourceGenerators.Shared/Observables.SourceGenerators.Shared.csproj</ObservablesSharedProject>
+
+    <ObservablesSharedProject>$(ObservablesRepoRoot)/Observables.Shared/Observables.SourceGenerators.Shared/Observables.SourceGenerators.Shared.csproj</ObservablesSharedProject>
+    <ObservablesEventsR3Generator>$(ObservablesRepoRoot)/Observables.Events/Observables.Events.R3.SourceGenerators/Observables.Events.R3.SourceGenerators.csproj</ObservablesEventsR3Generator>
+    <ObservablesRestApiRuntime>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI/Observables.RestAPI.csproj</ObservablesRestApiRuntime>
+    <ObservablesRestApiR3Generator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.R3.SourceGenerators/Observables.RestAPI.R3.SourceGenerators.csproj</ObservablesRestApiR3Generator>
   </PropertyGroup>
 </Project>

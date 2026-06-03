@@ -1,42 +1,49 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** (R3 and System.Reactive source generators).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview1`** NuGet packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1).
 
-## Generator reference: NuGet or local repo
+| Package | Sample project |
+|---------|----------------|
+| `Observables.Events.R3` | **Observables.Samples.Events** |
+| `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 
-**`Directory.Build.props`** detects a **sibling clone** at **`../Observables`**. When `Observables.slnx` is present, samples use **project references** to the matching analyzer projects instead of NuGet packages (not published yet).
+Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
-Override:
+## Build and run (NuGet, default)
+
+Requires **.NET 8 SDK** only — no sibling `../Observables` clone required.
 
 ```powershell
-dotnet build -p:UseLocalObservables=false   # force NuGet (when packages exist)
-dotnet build -p:UseLocalObservables=true    # force local sibling
+dotnet restore Observables.Samples.slnx
+dotnet build Observables.Samples.slnx
+
+dotnet run --project Observables.Samples.Events
+dotnet run --project Observables.Samples.RestAPI
 ```
 
-See **`build/README-LocalSourceGenerators.md`**.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview1`** and `UseLocalObservables=false` by default.
+
+## Local Observables repo (optional)
+
+When developing generators in a sibling clone:
+
+```powershell
+dotnet build -p:UseLocalObservables=true
+dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
+```
+
+Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGenerators.md`**.
 
 ## Projects
 
-| Project | Description |
-|---------|-------------|
-| **Observables.Samples.Events** | Console (`net8.0`) — placeholder entry point; full Events R3 walkthrough in `Observables.Samples.Events/README.md` (local analyzer wiring until NuGet ships). |
-
-More samples (RoutedEvents, RestAPI, SignalR, …) will be added as those domains stabilize.
-
-## Build
-
-Requires **.NET 8 SDK** (and **.NET 10 SDK** when samples target `net10.0`).
-
-```powershell
-# With ../Observables checked out (recommended)
-dotnet build Observables.Samples.slnx
-
-# CI also checks out Observables next to this repo (see .github/workflows/build.yml)
-```
+| Project | Demonstrates |
+|---------|----------------|
+| **Observables.Samples.Events** | `Events()`, `EventHandlers()`, multiple subscribers — see project `README.md` |
+| **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp — see project `README.md` |
 
 ## Documentation
 
-Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)** (VitePress; GitHub Pages URL after first deploy).
+Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)**.
 
 ## Related
 

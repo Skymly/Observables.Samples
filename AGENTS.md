@@ -6,9 +6,10 @@ This repository contains **sample apps only**. Do not add source generators or l
 
 ## Local development
 
-- Sibling path: `../Observables` (folder name must match the Git repo name).
+- **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.0-preview1`) via `Observables.Events.R3` / `Observables.RestAPI.R3` on nuget.org.
+- **Optional sibling**: `../Observables` with `-p:UseLocalObservables=true` for generator work.
 - Build: `dotnet build Observables.Samples.slnx` from the repo root.
-- Prefer `UseLocalObservables=true` when the sibling clone exists.
+- CI builds and runs samples with **`UseLocalObservables=false`** (no Observables checkout).
 
 ## Language
 

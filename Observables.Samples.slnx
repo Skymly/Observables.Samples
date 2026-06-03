@@ -3,11 +3,13 @@
     <File Path=".gitignore" />
     <File Path="AGENTS.md" />
     <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
     <File Path="build/README-LocalSourceGenerators.md" />
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
   <Folder Name="/Samples/">
     <Project Path="Observables.Samples.Events/Observables.Samples.Events.csproj" />
+    <Project Path="Observables.Samples.RestAPI/Observables.Samples.RestAPI.csproj" />
   </Folder>
 </Solution>

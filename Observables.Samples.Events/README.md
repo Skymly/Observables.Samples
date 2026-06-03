@@ -1,47 +1,32 @@
 # Observables.Samples.Events
 
-Console sample for **Observables.Events.R3.SourceGenerators** (classic CLR events → R3).
+Console sample for **`Observables.Events.R3`** `0.1.0-preview1` (classic CLR events → R3).
 
-## Prerequisites
-
-- Sibling clone: `../Observables` with `Observables.slnx`
-- .NET 8 SDK
-- Package [R3](https://www.nuget.org/packages/R3) 1.3.0
-
-## Project references (local)
+## Package reference (default)
 
 ```xml
-<ProjectReference Include="$(ObservablesSharedProject)">
-  <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-  <OutputItemType>Analyzer</OutputItemType>
-</ProjectReference>
-<ProjectReference Include="$(ObservablesEventsR3Generator)">
-  <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-  <OutputItemType>Analyzer</OutputItemType>
-</ProjectReference>
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview1" />
+<PackageReference Include="R3" Version="1.3.0" />
 ```
 
-Properties `ObservablesSharedProject` and `ObservablesEventsR3Generator` are defined in the repo root `Directory.Build.props`.
+This repo applies that via `Directory.Build.targets` when `UseLocalObservables=false`.
 
-Entry method name: `Events()` on branches that ship the rename; `FromEvents()` on `main` until that change is merged.
+## Run
 
-## Example source
-
-```csharp
-using R3;
-
-namespace Observables.Samples.Events.Models;
-
-public sealed class ClickSource
-{
-    public event Action? Click;
-    public void RaiseClick() => Click?.Invoke();
-}
-
-// In Program.cs after wiring analyzers:
-var source = new ClickSource();
-using var sub = source.FromEvents().Click.Subscribe(_ => Console.WriteLine("Clicked"));
-source.RaiseClick();
+```powershell
+dotnet run --project Observables.Samples.Events
 ```
 
-When **Observables.Events.R3** is published to NuGet, this project will switch to `PackageReference` with `IncludeAssets="analyzers"` (see root `build/README-LocalSourceGenerators.md`).
+## Demos
+
+| Demo | Entry API | Scenario |
+|------|-----------|----------|
+| `ClassicEventsDemo` | `Events()` | `Action` → `Observable<Unit>`; `Action<int>` → `Observable<int>` |
+| `EventHandlersDemo` | `EventHandlers()` | `EventHandler` on an interface |
+| `SharedEventStreamDemo` | `Events()` | Two subscribers on the same `CountChanged` stream |
+
+Models under `Models/`; wiring under `Demos/`.
+
+## Local analyzer wiring
+
+`-p:UseLocalObservables=true` switches to project references under `../Observables` (see root `build/README-LocalSourceGenerators.md`).

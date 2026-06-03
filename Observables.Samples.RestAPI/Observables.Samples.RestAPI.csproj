@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Observables.Samples.Events</RootNamespace>
-    <ObservablesSampleKind>Events</ObservablesSampleKind>
-    <Description>Console sample for Observables.Events R3 generator (local sibling or future NuGet).</Description>
+    <RootNamespace>Observables.Samples.RestAPI</RootNamespace>
+    <ObservablesSampleKind>RestAPI</ObservablesSampleKind>
+    <Description>Console sample for Observables.RestAPI R3 generator with in-memory HTTP.</Description>
   </PropertyGroup>
 
 </Project>
