@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.IO;
@@ -55,12 +57,23 @@ sealed class Build : NukeBuild
     {
         foreach ((string relativePath, bool runAfterBuild) in SampleProjects)
         {
-            if (relativePath.Contains("Events.Routed", StringComparison.Ordinal))
+            if (IsExcludedFromCi(relativePath))
             {
                 continue;
             }
 
             yield return (relativePath, runAfterBuild);
         }
+    }
+
+    bool IsExcludedFromCi(string relativePath)
+    {
+        AbsolutePath projectFile = Root / relativePath;
+        XDocument project = XDocument.Load(projectFile);
+
+        return project
+            .Descendants()
+            .Where(x => x.Name.LocalName == "ObservablesExcludeFromCi")
+            .Any(x => bool.TryParse(x.Value, out bool excludeFromCi) && excludeFromCi);
     }
 }
