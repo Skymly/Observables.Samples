@@ -11,4 +11,7 @@ public interface IUserApi
 
     [Get("/users/{id}")]
     Observable<User> GetUserObservable(int id);
+
+    [Get("/users")]
+    Task<IReadOnlyList<User>> ListUsersAsync();
 }

@@ -2,7 +2,7 @@
 
 ## Layout
 
-Clone both repositories as siblings:
+Clone both repositories as siblings when hacking generators:
 
 ```
 Skymly/
@@ -16,17 +16,22 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `UseLocalObservables` | `true` when `../Observables/Observables.slnx` exists | Use `ProjectReference` to analyzer/runtime projects |
+| `ObservablesPackageVersion` | `0.1.0-preview1` | NuGet version for Events/RestAPI meta-packages |
+| `UseLocalObservables` | `false` | `true` → sibling `ProjectReference` analyzers |
 | `ObservablesRepoRoot` | `../Observables` (absolute) | Path to the generator repository |
 | `ObservablesSampleKind` | per sample csproj | `Events` or `RestAPI` — selects `Directory.Build.targets` wiring |
 
 ## Commands
 
 ```powershell
+# NuGet packages (default, no sibling clone required)
 dotnet build Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events
 dotnet run --project Observables.Samples.RestAPI
-dotnet build -p:UseLocalObservables=false Observables.Samples.slnx
+
+# Sibling Observables repo
+dotnet build -p:UseLocalObservables=true Observables.Samples.slnx
+dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-When NuGet packages (`Observables.Events.R3`, `Observables.RestAPI.R3`, etc.) are published, `-p:UseLocalObservables=false` will restore packages instead of project references.
+Published packages: [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1).

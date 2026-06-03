@@ -14,19 +14,13 @@ jobs:
       - name: Checkout Observables.Samples
         uses: actions/checkout@v4
 
-      - name: Checkout Observables
-        uses: actions/checkout@v4
-        with:
-          repository: Skymly/Observables
-          path: Observables
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      - name: Build samples
-        run: dotnet build Observables.Samples.slnx -c Release
+      - name: Build samples (NuGet 0.1.0-preview1)
+        run: dotnet build Observables.Samples.slnx -c Release -p:UseLocalObservables=false
 
       - name: Run Events sample
         run: dotnet run --project Observables.Samples.Events -c Release --no-build

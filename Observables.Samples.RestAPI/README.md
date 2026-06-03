@@ -1,11 +1,15 @@
 # Observables.Samples.RestAPI
 
-Console sample for **Observables.RestAPI** runtime and **Observables.RestAPI.R3.SourceGenerators** (declarative HTTP → `Task` and R3 `Observable`).
+Console sample for **`Observables.RestAPI.R3`** `0.1.0-preview1` (declarative HTTP → `Task` and R3 `Observable`).
 
-## Prerequisites
+## Package reference (default)
 
-- Sibling clone: `../Observables` with `Observables.slnx`
-- .NET 8 SDK
+```xml
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview1" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+Runtime and R3 source generator are bundled in the meta-package.
 
 ## Run
 
@@ -13,21 +17,19 @@ Console sample for **Observables.RestAPI** runtime and **Observables.RestAPI.R3.
 dotnet run --project Observables.Samples.RestAPI
 ```
 
-Uses [RichardSzalay.MockHttp](https://www.nuget.org/packages/RichardSzalay.MockHttp) so no real HTTP server is required.
+Uses [RichardSzalay.MockHttp](https://www.nuget.org/packages/RichardSzalay.MockHttp) — no real HTTP server.
 
-## What it demonstrates
+## Demos (`MockHttpDemo`)
 
-- `IUserApi` with `[Get("/users/{id}")]` — same route for **Task** and **Observable** members
-- `RestService.For<IUserApi>(httpClient)` builds the generated client
-- `MockHttpDemo` exercises both call styles against canned JSON responses
+| Scenario | API style |
+|----------|-----------|
+| Single user | `Task<User>` `GetUserAsync` |
+| Single user (reactive) | `Observable<User>` + `FirstAsync` |
+| User list | `Task<IReadOnlyList<User>>` `ListUsersAsync` |
+| Not found | `ApiException` on HTTP 404 |
 
-API contract: `Api/IUserApi.cs`. DTO: `Models/User.cs`.
+Contract: `Api/IUserApi.cs`. DTO: `Models/User.cs`.
 
 ## Local wiring
 
-`ObservablesSampleKind=RestAPI` references:
-
-- `Observables.RestAPI/Observables.RestAPI` (runtime)
-- `Observables.RestAPI.R3.SourceGenerators` as analyzer (`OutputItemType=Analyzer`)
-
-See root `Directory.Build.props` for paths after the `Observables.<Feature>/` folder layout.
+`-p:UseLocalObservables=true` references `../Observables` runtime + analyzer projects instead of NuGet.

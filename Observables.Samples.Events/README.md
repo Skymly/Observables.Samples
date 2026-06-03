@@ -1,34 +1,32 @@
 # Observables.Samples.Events
 
-Console sample for **Observables.Events.R3.SourceGenerators** (classic CLR events → R3).
+Console sample for **`Observables.Events.R3`** `0.1.0-preview1` (classic CLR events → R3).
 
-## Prerequisites
+## Package reference (default)
 
-- Sibling clone: `../Observables` with `Observables.slnx`
-- .NET 8 SDK
-- Package [R3](https://www.nuget.org/packages/R3) 1.3.0 (pulled via `Directory.Build.targets` when local)
+```xml
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview1" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+This repo applies that via `Directory.Build.targets` when `UseLocalObservables=false`.
 
 ## Run
 
 ```powershell
-# From Observables.Samples repo root
 dotnet run --project Observables.Samples.Events
 ```
 
-## What it demonstrates
+## Demos
 
 | Demo | Entry API | Scenario |
 |------|-----------|----------|
 | `ClassicEventsDemo` | `Events()` | `Action` → `Observable<Unit>`; `Action<int>` → `Observable<int>` |
-| `EventHandlersDemo` | `EventHandlers()` | `EventHandler` → `Observable<(object? sender, EventArgs e)>` on an interface |
+| `EventHandlersDemo` | `EventHandlers()` | `EventHandler` on an interface |
+| `SharedEventStreamDemo` | `Events()` | Two subscribers on the same `CountChanged` stream |
 
-Source types live under `Models/`; wiring is in `Demos/`.
+Models under `Models/`; wiring under `Demos/`.
 
 ## Local analyzer wiring
 
-`ObservablesSampleKind=Events` and `Directory.Build.targets` add a project reference to  
-`Observables.Events/Observables.Events.R3.SourceGenerators` when `UseLocalObservables=true`.
-
-Optional routed events (`RoutedEvents()`, `ObservableRoutedEvents`, WPF/Avalonia) are documented in Observables; this sample stays on classic events only.
-
-When **Observables.Events.R3** ships on NuGet, switch to `PackageReference` with `IncludeAssets="analyzers"` (see `build/README-LocalSourceGenerators.md`).
+`-p:UseLocalObservables=true` switches to project references under `../Observables` (see root `build/README-LocalSourceGenerators.md`).

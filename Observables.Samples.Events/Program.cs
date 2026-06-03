@@ -1,28 +1,14 @@
 using Observables.Samples.Events.Demos;
 
-if (!IsLocalGeneratorBuild())
-{
-    Console.WriteLine("Observables.Samples.Events requires a sibling Observables clone.");
-    Console.WriteLine("Clone ../Observables and build with UseLocalObservables=true (default when Observables.slnx exists).");
-    Console.WriteLine("See README.md and build/README-LocalSourceGenerators.md.");
-    return;
-}
-
 Console.WriteLine("Observables.Samples.Events — R3 classic event wrappers");
+Console.WriteLine(Observables.Samples.Events.SampleMetadata.Describe());
 Console.WriteLine();
 
 ClassicEventsDemo.Run();
 Console.WriteLine();
 EventHandlersDemo.Run();
+Console.WriteLine();
+SharedEventStreamDemo.Run();
 
 Console.WriteLine();
 Console.WriteLine("Done.");
-
-static bool IsLocalGeneratorBuild()
-{
-#if LOCAL_OBSERVABLES
-    return true;
-#else
-    return false;
-#endif
-}

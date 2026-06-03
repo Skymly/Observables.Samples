@@ -1,44 +1,49 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** (R3 and System.Reactive source generators).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview1`** NuGet packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1).
 
-## Generator reference: NuGet or local repo
+| Package | Sample project |
+|---------|----------------|
+| `Observables.Events.R3` | **Observables.Samples.Events** |
+| `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 
-**`Directory.Build.props`** detects a **sibling clone** at **`../Observables`**. When `Observables.slnx` is present, samples use **project references** to the matching analyzer projects instead of NuGet packages (not published yet).
+Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
-Override:
+## Build and run (NuGet, default)
 
-```powershell
-dotnet build -p:UseLocalObservables=false   # force NuGet (when packages exist)
-dotnet build -p:UseLocalObservables=true    # force local sibling
-```
-
-See **`build/README-LocalSourceGenerators.md`**.
-
-## Projects
-
-| Project | Description |
-|---------|-------------|
-| **Observables.Samples.Events** | Classic CLR events → R3 (`Events()`, `EventHandlers()`). See project `README.md`. |
-| **Observables.Samples.RestAPI** | Declarative REST client (`Task` + `Observable<T>`) with MockHttp. See project `README.md`. |
-
-## Build and run
-
-Requires **.NET 8 SDK**.
+Requires **.NET 8 SDK** only — no sibling `../Observables` clone required.
 
 ```powershell
-# With ../Observables checked out (recommended)
+dotnet restore Observables.Samples.slnx
 dotnet build Observables.Samples.slnx
 
 dotnet run --project Observables.Samples.Events
 dotnet run --project Observables.Samples.RestAPI
 ```
 
-Without a sibling Observables repo, samples build a stub `Program.cs` that prints setup instructions (`LOCAL_OBSERVABLES` not defined).
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview1`** and `UseLocalObservables=false` by default.
+
+## Local Observables repo (optional)
+
+When developing generators in a sibling clone:
+
+```powershell
+dotnet build -p:UseLocalObservables=true
+dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
+```
+
+Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGenerators.md`**.
+
+## Projects
+
+| Project | Demonstrates |
+|---------|----------------|
+| **Observables.Samples.Events** | `Events()`, `EventHandlers()`, multiple subscribers — see project `README.md` |
+| **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp — see project `README.md` |
 
 ## Documentation
 
-Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)** (VitePress; GitHub Pages URL after first deploy).
+Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)**.
 
 ## Related
 
