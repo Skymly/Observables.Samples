@@ -16,7 +16,7 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `ObservablesPackageVersion` | `0.1.0-preview1` | NuGet version for Events/RestAPI meta-packages |
+| `ObservablesPackageVersion` | `0.1.0-preview2` | NuGet version for Events/RestAPI meta-packages |
 | `UseLocalObservables` | `false` | `true` → sibling `ProjectReference` analyzers |
 | `ObservablesRepoRoot` | `../Observables` (absolute) | Path to the generator repository |
 | `ObservablesSampleKind` | per sample csproj | `Events` or `RestAPI` — selects `Directory.Build.targets` wiring |
@@ -34,4 +34,4 @@ dotnet build -p:UseLocalObservables=true Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-Published packages: [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1).
+Published packages: [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2).
