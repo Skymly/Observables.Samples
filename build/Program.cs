@@ -23,6 +23,7 @@ sealed class Build : NukeBuild
         ("Observables.Samples.Events.Reactive/Observables.Samples.Events.Reactive.csproj", true),
         ("Observables.Samples.RestAPI.Reactive/Observables.Samples.RestAPI.Reactive.csproj", true),
         ("Observables.Samples.SignalR/Observables.Samples.SignalR.csproj", true),
+        ("Observables.Samples.Mqtt/Observables.Samples.Mqtt.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 
@@ -57,6 +58,11 @@ sealed class Build : NukeBuild
         foreach ((string relativePath, bool runAfterBuild) in SampleProjects)
         {
             if (relativePath.Contains("Events.Routed", StringComparison.Ordinal))
+            {
+                continue;
+            }
+
+            if (relativePath.Contains("Samples.Mqtt", StringComparison.Ordinal) && !UseLocalObservables)
             {
                 continue;
             }
