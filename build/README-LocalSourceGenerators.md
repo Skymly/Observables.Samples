@@ -16,7 +16,7 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `ObservablesPackageVersion` | `0.1.0-preview3` | NuGet version for Events/RestAPI/SignalR meta-packages |
+| `ObservablesPackageVersion` | `0.1.0-preview4` | NuGet version for Events/RestAPI/SignalR meta-packages |
 | `UseLocalObservables` | `false` | `true` → sibling `ProjectReference` analyzers |
 | `ObservablesRepoRoot` | `../Observables` (absolute) | Path to the generator repository |
 | `ObservablesSampleKind` | per sample csproj | `Events`, `RestAPI`, `SignalR`, `Mqtt`, … — selects `Directory.Build.targets` wiring |
@@ -36,4 +36,4 @@ dotnet build -p:UseLocalObservables=true Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-Published packages: [Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3), [RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3), [SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) (and `.Reactive` counterparts). **Mqtt** requires a sibling Observables clone until the next preview NuGet line.
+Published packages: [Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4), [RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4), [SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4) (and `.Reactive` counterparts). **Mqtt** requires a sibling Observables clone until the next preview NuGet line.

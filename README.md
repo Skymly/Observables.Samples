@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview3`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3) (Events, RestAPI, and SignalR). **Mqtt** is on Observables `main` but not on nuget.org yet — use **`-p:UseLocalObservables=true`** with a sibling clone.
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview4`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4) (Events, RestAPI, SignalR, and Mqtt).
 
 | Package | Sample project |
 |---------|----------------|
@@ -10,7 +10,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 | `Observables.RestAPI.Reactive` | **Observables.Samples.RestAPI.Reactive** |
 | `Observables.SignalR.R3` | **Observables.Samples.SignalR** |
-| `Observables.Mqtt.R3` (local clone) | **Observables.Samples.Mqtt** |
+| `Observables.Mqtt.R3` | **Observables.Samples.Mqtt** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -27,7 +27,7 @@ dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
-dotnet run --project Observables.Samples.Mqtt -p:UseLocalObservables=true
+dotnet run --project Observables.Samples.Mqtt
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -35,7 +35,7 @@ dotnet run --project Observables.Samples.Events.Routed
 
 CI uses Nuke: `./build.cmd Ci` (builds and runs console samples; **skips** `Observables.Samples.Events.Routed` on GitHub Actions).
 
-`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview3`** and `UseLocalObservables=false` by default.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview4`** and `UseLocalObservables=false` by default.
 
 ## Local Observables repo (optional)
 

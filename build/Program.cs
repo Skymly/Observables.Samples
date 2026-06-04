@@ -62,11 +62,6 @@ sealed class Build : NukeBuild
                 continue;
             }
 
-            if (relativePath.Contains("Samples.Mqtt", StringComparison.Ordinal) && !UseLocalObservables)
-            {
-                continue;
-            }
-
             yield return (relativePath, runAfterBuild);
         }
     }

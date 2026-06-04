@@ -8,12 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Observables.Samples.Mqtt</RootNamespace>
     <ObservablesSampleKind>Mqtt</ObservablesSampleKind>
-    <Description>Console sample for Observables.Mqtt R3 topic proxy generator (local Observables clone; no broker in CI).</Description>
+    <Description>Console sample for Observables.Mqtt R3 topic proxy generator (no broker in CI).</Description>
   </PropertyGroup>
-
-  <ItemGroup Condition="'$(UseLocalObservables)' != 'true'">
-    <Compile Remove="Api\**" />
-    <Compile Remove="Demos\**" />
-  </ItemGroup>
 
 </Project>

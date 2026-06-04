@@ -1,11 +1,11 @@
 # Observables.Samples.Events
 
-Console sample for **`Observables.Events.R3`** `0.1.0-preview3` (classic CLR events → R3).
+Console sample for **`Observables.Events.R3`** `0.1.0-preview4` (classic CLR events → R3).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview4" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
