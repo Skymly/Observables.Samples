@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview3`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3) (Events, RestAPI, and SignalR).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview3`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3) (Events, RestAPI, and SignalR). **Mqtt** is on Observables `main` but not on nuget.org yet — use **`-p:UseLocalObservables=true`** with a sibling clone.
 
 | Package | Sample project |
 |---------|----------------|
@@ -10,6 +10,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 | `Observables.RestAPI.Reactive` | **Observables.Samples.RestAPI.Reactive** |
 | `Observables.SignalR.R3` | **Observables.Samples.SignalR** |
+| `Observables.Mqtt.R3` (local clone) | **Observables.Samples.Mqtt** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -26,6 +27,7 @@ dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
+dotnet run --project Observables.Samples.Mqtt -p:UseLocalObservables=true
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -56,6 +58,7 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp — see project `README.md` |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
 | **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) — see project `README.md` |
+| **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (local Observables; no broker in CI) — see project `README.md` |
 
 ## Documentation
 

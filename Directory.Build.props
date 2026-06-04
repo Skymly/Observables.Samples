@@ -16,5 +16,7 @@
     <ObservablesRestApiReactiveGenerator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive.SourceGenerators/Observables.RestAPI.Reactive.SourceGenerators.csproj</ObservablesRestApiReactiveGenerator>
     <ObservablesSignalRRuntime>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR/Observables.SignalR.csproj</ObservablesSignalRRuntime>
     <ObservablesSignalRR3Generator>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.R3.SourceGenerators/Observables.SignalR.R3.SourceGenerators.csproj</ObservablesSignalRR3Generator>
+    <ObservablesMqttRuntime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt/Observables.Mqtt.csproj</ObservablesMqttRuntime>
+    <ObservablesMqttR3Generator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.R3.SourceGenerators/Observables.Mqtt.R3.SourceGenerators.csproj</ObservablesMqttR3Generator>
   </PropertyGroup>
 </Project>

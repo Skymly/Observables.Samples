@@ -15,6 +15,7 @@
     <Project Path="Observables.Samples.RestAPI/Observables.Samples.RestAPI.csproj" />
     <Project Path="Observables.Samples.RestAPI.Reactive/Observables.Samples.RestAPI.Reactive.csproj" />
     <Project Path="Observables.Samples.SignalR/Observables.Samples.SignalR.csproj" />
+    <Project Path="Observables.Samples.Mqtt/Observables.Samples.Mqtt.csproj" />
   </Folder>
   <Folder Name="/Build/">
     <Project Path="build/_build.csproj" />
