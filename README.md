@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview3`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3) (Events, RestAPI, and SignalR; see [SignalR docs](https://github.com/Skymly/Observables.Docs/blob/main/docs/signalr.md) — no SignalR sample project in this repo yet).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview3`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3) (Events, RestAPI, and SignalR).
 
 | Package | Sample project |
 |---------|----------------|
@@ -9,6 +9,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.Events.R3` + Avalonia routed | **Observables.Samples.Events.Routed** (local desktop only) |
 | `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 | `Observables.RestAPI.Reactive` | **Observables.Samples.RestAPI.Reactive** |
+| `Observables.SignalR.R3` | **Observables.Samples.SignalR** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -24,6 +25,7 @@ dotnet run --project Observables.Samples.Events
 dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
+dotnet run --project Observables.Samples.SignalR
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -53,6 +55,7 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.Events.Routed** | Avalonia `RoutedEvents()` / `<ObservableRoutedEvents>` — see project `README.md` |
 | **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp — see project `README.md` |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
+| **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) — see project `README.md` |
 
 ## Documentation
 

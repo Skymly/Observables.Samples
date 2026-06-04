@@ -28,6 +28,7 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 dotnet build Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events
 dotnet run --project Observables.Samples.RestAPI
+dotnet run --project Observables.Samples.SignalR
 
 # Sibling Observables repo
 dotnet build -p:UseLocalObservables=true Observables.Samples.slnx

@@ -22,6 +22,7 @@ sealed class Build : NukeBuild
         ("Observables.Samples.RestAPI/Observables.Samples.RestAPI.csproj", true),
         ("Observables.Samples.Events.Reactive/Observables.Samples.Events.Reactive.csproj", true),
         ("Observables.Samples.RestAPI.Reactive/Observables.Samples.RestAPI.Reactive.csproj", true),
+        ("Observables.Samples.SignalR/Observables.Samples.SignalR.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 

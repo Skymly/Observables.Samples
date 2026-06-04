@@ -14,5 +14,7 @@
     <ObservablesRestApiReactiveRuntime>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive/Observables.RestAPI.Reactive.csproj</ObservablesRestApiReactiveRuntime>
     <ObservablesRestApiR3Generator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.R3.SourceGenerators/Observables.RestAPI.R3.SourceGenerators.csproj</ObservablesRestApiR3Generator>
     <ObservablesRestApiReactiveGenerator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive.SourceGenerators/Observables.RestAPI.Reactive.SourceGenerators.csproj</ObservablesRestApiReactiveGenerator>
+    <ObservablesSignalRRuntime>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR/Observables.SignalR.csproj</ObservablesSignalRRuntime>
+    <ObservablesSignalRR3Generator>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.R3.SourceGenerators/Observables.SignalR.R3.SourceGenerators.csproj</ObservablesSignalRR3Generator>
   </PropertyGroup>
 </Project>
