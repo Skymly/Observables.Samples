@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Observables.Samples.WebSocket</RootNamespace>
+    <ObservablesSampleKind>WebSocket</ObservablesSampleKind>
+    <Description>Console sample for Observables.WebSocket R3 proxy generator (no live server in CI).</Description>
+  </PropertyGroup>
+
+</Project>

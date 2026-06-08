@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ObservablesPackageVersion>0.1.0-preview4</ObservablesPackageVersion>
+    <ObservablesPackageVersion>0.1.0-preview5</ObservablesPackageVersion>
 
     <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
@@ -18,5 +18,7 @@
     <ObservablesSignalRR3Generator>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.R3.SourceGenerators/Observables.SignalR.R3.SourceGenerators.csproj</ObservablesSignalRR3Generator>
     <ObservablesMqttRuntime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt/Observables.Mqtt.csproj</ObservablesMqttRuntime>
     <ObservablesMqttR3Generator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.R3.SourceGenerators/Observables.Mqtt.R3.SourceGenerators.csproj</ObservablesMqttR3Generator>
+    <ObservablesWebSocketRuntime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket/Observables.WebSocket.csproj</ObservablesWebSocketRuntime>
+    <ObservablesWebSocketR3Generator>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.R3.SourceGenerators/Observables.WebSocket.R3.SourceGenerators.csproj</ObservablesWebSocketR3Generator>
   </PropertyGroup>
 </Project>

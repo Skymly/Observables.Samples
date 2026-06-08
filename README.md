@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview4`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4) (Events, RestAPI, SignalR, and Mqtt).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.0-preview5`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5) (Events, RestAPI, SignalR, Mqtt, and WebSocket).
 
 | Package | Sample project |
 |---------|----------------|
@@ -11,6 +11,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.RestAPI.Reactive` | **Observables.Samples.RestAPI.Reactive** |
 | `Observables.SignalR.R3` | **Observables.Samples.SignalR** |
 | `Observables.Mqtt.R3` | **Observables.Samples.Mqtt** |
+| `Observables.WebSocket.R3` | **Observables.Samples.WebSocket** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -28,6 +29,7 @@ dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
 dotnet run --project Observables.Samples.Mqtt
+dotnet run --project Observables.Samples.WebSocket
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -35,7 +37,7 @@ dotnet run --project Observables.Samples.Events.Routed
 
 CI uses Nuke: `./build.cmd Ci` (builds and runs console samples; **skips** `Observables.Samples.Events.Routed` on GitHub Actions).
 
-`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview4`** and `UseLocalObservables=false` by default.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.0-preview5`** and `UseLocalObservables=false` by default.
 
 ## Local Observables repo (optional)
 
@@ -59,6 +61,7 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
 | **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) — see project `README.md` |
 | **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (local Observables; no broker in CI) — see project `README.md` |
+| **Observables.Samples.WebSocket** | `[WebSocket]` proxy registration check (no live server in CI) — see project `README.md` |
 
 ## Documentation
 

@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Reference mode: local ../Observables SignalR runtime + R3 generator";
 #else
-        return "Package mode: Observables.SignalR.R3 0.1.0-preview4 (nuget.org)";
+        return "Package mode: Observables.SignalR.R3 0.1.0-preview5 (nuget.org)";
 #endif
     }
 }
