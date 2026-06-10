@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Observables.Samples.Grpc.Reactive</RootNamespace>
+    <ObservablesSampleKind>GrpcReactive</ObservablesSampleKind>
+    <Description>Console sample for Observables.Grpc.Reactive (IObservable gRPC proxy).</Description>
+  </PropertyGroup>
+
+</Project>
