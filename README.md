@@ -18,7 +18,7 @@ Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGE
 
 ## Build and run (NuGet, default)
 
-Requires **.NET 8 SDK** only ? no sibling `../Observables` clone required.
+Requires **.NET 8 SDK** only - no sibling `../Observables` clone required.
 
 ```powershell
 dotnet restore Observables.Samples.slnx
@@ -56,15 +56,15 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 
 | Project | Demonstrates |
 |---------|----------------|
-| **Observables.Samples.Events** | `Events()`, `EventHandlers()`, multiple subscribers ? see project `README.md` |
+| **Observables.Samples.Events** | `Events()`, `EventHandlers()`, multiple subscribers - see project `README.md` |
 | **Observables.Samples.Events.Reactive** | `IObservable` from classic events |
-| **Observables.Samples.Events.Routed** | Avalonia `RoutedEvents()` / `<ObservableRoutedEvents>` ? see project `README.md` |
-| **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp ? see project `README.md` |
+| **Observables.Samples.Events.Routed** | Avalonia `RoutedEvents()` / `<ObservableRoutedEvents>` - see project `README.md` |
+| **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp - see project `README.md` |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
-| **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) ? see project `README.md` |
-| **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (local Observables; no broker in CI) ? see project `README.md` |
-| **Observables.Samples.WebSocket** | `[WebSocket]` proxy registration check (no live server in CI) ? see project `README.md` |
-| **Observables.Samples.Grpc** | `[Grpc]` proxy registration check (no live server in CI) ? see project `README.md` |
+| **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) - see project `README.md` |
+| **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (local Observables; no broker in CI) - see project `README.md` |
+| **Observables.Samples.WebSocket** | `[WebSocket]` proxy registration check (no live server in CI) - see project `README.md` |
+| **Observables.Samples.Grpc** | `[Grpc]` proxy registration check (no live server in CI) - see project `README.md` |
 
 ## Documentation
 
@@ -79,4 +79,4 @@ Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)
 
 ## License
 
-MIT ? see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).

@@ -2,7 +2,7 @@ using Observables.Events.Reactive;
 using Observables.Samples.Events.Models;
 using System.Reactive.Linq;
 
-Console.WriteLine("Observables.Samples.Events.Reactive â€?IObservable from classic events");
+Console.WriteLine("Observables.Samples.Events.Reactive - IObservable from classic events");
 Console.WriteLine();
 
 var click = new ClickSource();

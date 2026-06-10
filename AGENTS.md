@@ -1,8 +1,8 @@
-# Observables.Samples â€?AI agent notes
+# Observables.Samples — AI agent notes
 
 ## Scope
 
-This repository contains **sample apps only**. Do not add source generators or library code here â€?change [Observables](https://github.com/Skymly/Observables) instead.
+This repository contains **sample apps only**. Do not add source generators or library code here — change [Observables](https://github.com/Skymly/Observables) instead.
 
 ## Local development
 
@@ -14,7 +14,7 @@ This repository contains **sample apps only**. Do not add source generators or l
 
 ## Language
 
-- User chat: ç®€ä½“ä¸­æ–?(unless requested otherwise).
+- User chat: ???? (unless requested otherwise).
 - Commit messages and GitHub Issue/PR text: **English**.
 
 ## Git
