@@ -18,6 +18,10 @@
     <Project Path="Observables.Samples.Mqtt/Observables.Samples.Mqtt.csproj" />
     <Project Path="Observables.Samples.WebSocket/Observables.Samples.WebSocket.csproj" />
     <Project Path="Observables.Samples.Grpc/Observables.Samples.Grpc.csproj" />
+    <Project Path="Observables.Samples.SignalR.Reactive/Observables.Samples.SignalR.Reactive.csproj" />
+    <Project Path="Observables.Samples.Mqtt.Reactive/Observables.Samples.Mqtt.Reactive.csproj" />
+    <Project Path="Observables.Samples.WebSocket.Reactive/Observables.Samples.WebSocket.Reactive.csproj" />
+    <Project Path="Observables.Samples.Grpc.Reactive/Observables.Samples.Grpc.Reactive.csproj" />
   </Folder>
   <Folder Name="/Build/">
     <Project Path="build/_build.csproj" />

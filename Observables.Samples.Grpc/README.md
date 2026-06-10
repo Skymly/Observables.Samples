@@ -13,3 +13,5 @@ Console sample for **`Observables.Grpc.R3`** `0.1.0-preview6` (declarative gRPC 
 ## CI behavior
 
 `RegistrationDemo` only checks that the source generator registered a factory (null `CallInvoker` -> `ArgumentNullException`). No network I/O.
+
+See [gRPC testing](https://github.com/Skymly/Observables.Docs/blob/main/docs/grpc.md#testing) in Observables.Docs for in-memory `TestServer` patterns used in the main repo.

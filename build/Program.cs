@@ -26,6 +26,10 @@ sealed class Build : NukeBuild
         ("Observables.Samples.Mqtt/Observables.Samples.Mqtt.csproj", true),
         ("Observables.Samples.WebSocket/Observables.Samples.WebSocket.csproj", true),
         ("Observables.Samples.Grpc/Observables.Samples.Grpc.csproj", true),
+        ("Observables.Samples.SignalR.Reactive/Observables.Samples.SignalR.Reactive.csproj", true),
+        ("Observables.Samples.Mqtt.Reactive/Observables.Samples.Mqtt.Reactive.csproj", true),
+        ("Observables.Samples.WebSocket.Reactive/Observables.Samples.WebSocket.Reactive.csproj", true),
+        ("Observables.Samples.Grpc.Reactive/Observables.Samples.Grpc.Reactive.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 

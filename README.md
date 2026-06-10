@@ -10,9 +10,13 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.RestAPI.R3` | **Observables.Samples.RestAPI** |
 | `Observables.RestAPI.Reactive` | **Observables.Samples.RestAPI.Reactive** |
 | `Observables.SignalR.R3` | **Observables.Samples.SignalR** |
+| `Observables.SignalR.Reactive` | **Observables.Samples.SignalR.Reactive** |
 | `Observables.Mqtt.R3` | **Observables.Samples.Mqtt** |
+| `Observables.Mqtt.Reactive` | **Observables.Samples.Mqtt.Reactive** |
 | `Observables.WebSocket.R3` | **Observables.Samples.WebSocket** |
+| `Observables.WebSocket.Reactive` | **Observables.Samples.WebSocket.Reactive** |
 | `Observables.Grpc.R3` | **Observables.Samples.Grpc** |
+| `Observables.Grpc.Reactive` | **Observables.Samples.Grpc.Reactive** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -29,9 +33,13 @@ dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
+dotnet run --project Observables.Samples.SignalR.Reactive
 dotnet run --project Observables.Samples.Mqtt
+dotnet run --project Observables.Samples.Mqtt.Reactive
 dotnet run --project Observables.Samples.WebSocket
+dotnet run --project Observables.Samples.WebSocket.Reactive
 dotnet run --project Observables.Samples.Grpc
+dotnet run --project Observables.Samples.Grpc.Reactive
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -62,9 +70,13 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.RestAPI** | `Task` + `Observable<T>`, list GET, `ApiException` with MockHttp - see project `README.md` |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
 | **Observables.Samples.SignalR** | `[Hub]` proxy registration check (no live server in CI) - see project `README.md` |
-| **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (local Observables; no broker in CI) - see project `README.md` |
+| **Observables.Samples.SignalR.Reactive** | `[Hub]` IObservable proxy registration check (no live server in CI) |
+| **Observables.Samples.Mqtt** | `[Mqtt]` proxy registration check (no broker in CI) - see project `README.md` |
+| **Observables.Samples.Mqtt.Reactive** | `[Mqtt]` IObservable proxy registration check (no broker in CI) |
 | **Observables.Samples.WebSocket** | `[WebSocket]` proxy registration check (no live server in CI) - see project `README.md` |
+| **Observables.Samples.WebSocket.Reactive** | `[WebSocket]` IObservable proxy registration check (no live server in CI) |
 | **Observables.Samples.Grpc** | `[Grpc]` proxy registration check (no live server in CI) - see project `README.md` |
+| **Observables.Samples.Grpc.Reactive** | `[Grpc]` IObservable proxy registration check (no live server in CI) |
 
 ## Documentation
 
