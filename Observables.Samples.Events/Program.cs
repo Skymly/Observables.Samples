@@ -1,6 +1,6 @@
 using Observables.Samples.Events.Demos;
 
-Console.WriteLine("Observables.Samples.Events â€?R3 classic event wrappers");
+Console.WriteLine("Observables.Samples.Events - R3 classic event wrappers");
 Console.WriteLine(Observables.Samples.Events.SampleMetadata.Describe());
 Console.WriteLine();
 
