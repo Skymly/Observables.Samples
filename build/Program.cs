@@ -30,6 +30,8 @@ sealed class Build : NukeBuild
         ("Observables.Samples.Mqtt.Reactive/Observables.Samples.Mqtt.Reactive.csproj", true),
         ("Observables.Samples.WebSocket.Reactive/Observables.Samples.WebSocket.Reactive.csproj", true),
         ("Observables.Samples.Grpc.Reactive/Observables.Samples.Grpc.Reactive.csproj", true),
+        ("Observables.Samples.Sse/Observables.Samples.Sse.csproj", true),
+        ("Observables.Samples.Sse.Reactive/Observables.Samples.Sse.Reactive.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 
@@ -67,6 +69,8 @@ sealed class Build : NukeBuild
             {
                 continue;
             }
+
+            // Sse packages ship from 0.1.0-preview7 onward.
 
             yield return (relativePath, runAfterBuild);
         }
