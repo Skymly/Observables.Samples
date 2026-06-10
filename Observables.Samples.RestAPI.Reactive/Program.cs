@@ -6,7 +6,7 @@ using Observables.Samples.RestAPI.Reactive.Api;
 using Observables.Samples.RestAPI.Models;
 using RichardSzalay.MockHttp;
 
-Console.WriteLine("Observables.Samples.RestAPI.Reactive â€” IObservable HTTP client");
+Console.WriteLine("Observables.Samples.RestAPI.Reactive â€?IObservable HTTP client");
 Console.WriteLine();
 
 using var mockHttp = new MockHttpMessageHandler();

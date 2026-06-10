@@ -1,6 +1,6 @@
 using Observables.Samples.WebSocket.Demos;
 
-Console.WriteLine("Observables.Samples.WebSocket â€” declarative WebSocket proxy (R3)");
+Console.WriteLine("Observables.Samples.WebSocket â€?declarative WebSocket proxy (R3)");
 Console.WriteLine(Observables.Samples.WebSocket.SampleMetadata.Describe());
 Console.WriteLine();
 
