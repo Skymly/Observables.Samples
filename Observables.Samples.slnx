@@ -17,6 +17,7 @@
     <Project Path="Observables.Samples.SignalR/Observables.Samples.SignalR.csproj" />
     <Project Path="Observables.Samples.Mqtt/Observables.Samples.Mqtt.csproj" />
     <Project Path="Observables.Samples.WebSocket/Observables.Samples.WebSocket.csproj" />
+    <Project Path="Observables.Samples.Grpc/Observables.Samples.Grpc.csproj" />
   </Folder>
   <Folder Name="/Build/">
     <Project Path="build/_build.csproj" />

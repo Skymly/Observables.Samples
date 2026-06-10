@@ -1,12 +1,12 @@
-# Observables.Samples — AI agent notes
+# Observables.Samples �?AI agent notes
 
 ## Scope
 
-This repository contains **sample apps only**. Do not add source generators or library code here — change [Observables](https://github.com/Skymly/Observables) instead.
+This repository contains **sample apps only**. Do not add source generators or library code here �?change [Observables](https://github.com/Skymly/Observables) instead.
 
 ## Local development
 
-- **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.0-preview5`) via `Observables.Events.R3` / `Observables.RestAPI.R3` / `Observables.SignalR.R3` on nuget.org.
+- **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.0-preview6`) via `Observables.Events.R3` / `Observables.RestAPI.R3` / `Observables.SignalR.R3` / `Observables.Grpc.R3` on nuget.org.
 - **Optional sibling**: `../Observables` with `-p:UseLocalObservables=true` for generator work.
 - Build: `dotnet build Observables.Samples.slnx` or `./build.cmd Ci` from the repo root.
 - CI uses **Nuke** `./build.cmd Ci` with **`UseLocalObservables=false`** (no Observables checkout).
@@ -14,7 +14,7 @@ This repository contains **sample apps only**. Do not add source generators or l
 
 ## Language
 
-- User chat: 简体中文 (unless requested otherwise).
+- User chat: 简体中�?(unless requested otherwise).
 - Commit messages and GitHub Issue/PR text: **English**.
 
 ## Git
