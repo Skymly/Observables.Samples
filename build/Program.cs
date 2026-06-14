@@ -32,6 +32,8 @@ sealed class Build : NukeBuild
         ("Observables.Samples.Grpc.Reactive/Observables.Samples.Grpc.Reactive.csproj", true),
         ("Observables.Samples.Sse/Observables.Samples.Sse.csproj", true),
         ("Observables.Samples.Sse.Reactive/Observables.Samples.Sse.Reactive.csproj", true),
+        ("Observables.Samples.Nats/Observables.Samples.Nats.csproj", true),
+        ("Observables.Samples.Nats.Reactive/Observables.Samples.Nats.Reactive.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 

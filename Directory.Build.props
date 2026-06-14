@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ObservablesPackageVersion>0.1.0-preview7</ObservablesPackageVersion>
+    <ObservablesPackageVersion>0.1.0-preview8</ObservablesPackageVersion>
 
     <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
@@ -34,5 +34,9 @@
     <ObservablesSseR3Generator>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.R3.SourceGenerators/Observables.Sse.R3.SourceGenerators.csproj</ObservablesSseR3Generator>
     <ObservablesSseReactiveRuntime>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.Reactive/Observables.Sse.Reactive.csproj</ObservablesSseReactiveRuntime>
     <ObservablesSseReactiveGenerator>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.Reactive.SourceGenerators/Observables.Sse.Reactive.SourceGenerators.csproj</ObservablesSseReactiveGenerator>
+    <ObservablesNatsRuntime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats/Observables.Nats.csproj</ObservablesNatsRuntime>
+    <ObservablesNatsR3Generator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.R3.SourceGenerators/Observables.Nats.R3.SourceGenerators.csproj</ObservablesNatsR3Generator>
+    <ObservablesNatsReactiveRuntime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive/Observables.Nats.Reactive.csproj</ObservablesNatsReactiveRuntime>
+    <ObservablesNatsReactiveGenerator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive.SourceGenerators/Observables.Nats.Reactive.SourceGenerators.csproj</ObservablesNatsReactiveGenerator>
   </PropertyGroup>
 </Project>
