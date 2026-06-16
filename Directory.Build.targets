@@ -241,7 +241,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseLocalObservables)' != 'true' and '$(ObservablesSampleKind)' == 'Nats'">
-    <PackageReference Include="Observables.Nats.R3" Version="0.1.0-preview8" />
+    <PackageReference Include="Observables.Nats.R3" Version="0.1.0" />
     <PackageReference Include="R3" Version="1.3.0" />
     <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
   </ItemGroup>
@@ -257,7 +257,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseLocalObservables)' != 'true' and '$(ObservablesSampleKind)' == 'NatsReactive'">
-    <PackageReference Include="Observables.Nats.Reactive" Version="0.1.0-preview8" />
+    <PackageReference Include="Observables.Nats.Reactive" Version="0.1.0" />
     <PackageReference Include="System.Reactive" Version="6.0.1" />
     <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
   </ItemGroup>
