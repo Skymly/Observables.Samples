@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Local mode: Observables.Grpc.R3 source generators from sibling ../Observables";
 #else
-        return "Package mode: Observables.Grpc.R3 0.1.0 (nuget.org)";
+        return "Package mode: Observables.Grpc.R3 0.1.1-preview1 (nuget.org)";
 #endif
     }
 }

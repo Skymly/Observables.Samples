@@ -1,13 +1,11 @@
 # Observables.Samples.Nats.Reactive
 
-Console sample for **`Observables.Nats.Reactive`** — declarative Core NATS subject interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Nats.Reactive`** `0.1.1-preview1` — declarative Core NATS subject interface proxies returning `IObservable<T>`.
 
 ## Package reference (default)
 
-Planned NuGet line **`0.1.0`**. Until then:
-
-```powershell
-dotnet run --project Observables.Samples.Nats.Reactive -p:UseLocalObservables=true
+```xml
+<PackageReference Include="Observables.Nats.Reactive" Version="0.1.1-preview1" />
 ```
 
 ## What it demonstrates

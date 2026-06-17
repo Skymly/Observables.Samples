@@ -1,11 +1,11 @@
 # Observables.Samples.RestAPI
 
-Console sample for **`Observables.RestAPI.R3`** `0.1.0` (declarative HTTP �?`Task` and R3 `Observable`).
+Console sample for **`Observables.RestAPI.R3`** `0.1.1-preview1` (declarative HTTP �?`Task` and R3 `Observable`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.1-preview1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
