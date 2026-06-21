@@ -6,7 +6,7 @@ This repository contains **sample apps only**. Do not add source generators or l
 
 ## Local development
 
-- **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.1-preview1`) via `Observables.Events.R3` / `Observables.RestAPI.R3` / `Observables.SignalR.R3` / `Observables.Grpc.R3` / `Observables.Sse.R3` on nuget.org.
+- **Default**: NuGet **`ObservablesPackageVersion`** (`0.1.1`) via `Observables.Events.R3` / `Observables.RestAPI.R3` / `Observables.SignalR.R3` / `Observables.Grpc.R3` / `Observables.Sse.R3` on nuget.org.
 - **Optional sibling**: `../Observables` with `-p:UseLocalObservables=true` for generator work.
 - Build: `dotnet build Observables.Samples.slnx` or `./build.cmd Ci` from the repo root.
 - CI uses **Nuke** `./build.cmd Ci` with **`UseLocalObservables=false`** (no Observables checkout).
