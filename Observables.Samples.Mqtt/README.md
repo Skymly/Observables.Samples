@@ -1,11 +1,11 @@
 # Observables.Samples.Mqtt
 
-Console sample for **`Observables.Mqtt.R3`** `0.1.1-preview1` (declarative topic interface �?R3 `Observable` + `MqttService.For`).
+Console sample for **`Observables.Mqtt.R3`** `0.1.1` (declarative topic interface �?R3 `Observable` + `MqttService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.1-preview1" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.1" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 ```
 
