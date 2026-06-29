@@ -1,11 +1,11 @@
 # Observables.Samples.Nats
 
-Console sample for **`Observables.Nats.R3`** `0.1.1` (declarative Core NATS subject interface → R3 `Observable` + `NatsService.For`).
+Console sample for **`Observables.Nats.R3`** `0.1.2` (declarative Core NATS subject interface → R3 `Observable` + `NatsService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Nats.R3" Version="0.1.1" />
+<PackageReference Include="Observables.Nats.R3" Version="0.1.2" />
 <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
 ```
 
