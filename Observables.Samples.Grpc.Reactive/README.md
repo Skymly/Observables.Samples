@@ -1,6 +1,6 @@
 # Observables.Samples.Grpc.Reactive
 
-Console sample for **`Observables.Grpc.Reactive`** `0.1.2` — declarative gRPC interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Grpc.Reactive`** `0.1.4` �?declarative gRPC interface proxies returning `IObservable<T>`.
 
 ## Run
 
@@ -17,6 +17,6 @@ dotnet run --project Observables.Samples.Grpc.Reactive -p:UseLocalObservables=tr
 ## What it demonstrates
 
 - `[Grpc]` interface with unary and streaming RPC members returning `IObservable<T>`
-- Source-generated proxy registration via module initializer (`RegistrationDemo` — no network in CI)
+- Source-generated proxy registration via module initializer (`RegistrationDemo` �?no network in CI)
 
-See [Observables.Docs — gRPC](https://github.com/Skymly/Observables.Docs/blob/main/docs/grpc.md).
+See [Observables.Docs �?gRPC](https://github.com/Skymly/Observables.Docs/blob/main/docs/grpc.md).

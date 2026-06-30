@@ -1,6 +1,6 @@
 # Observables.Samples.Mqtt.Reactive
 
-Console sample for **`Observables.Mqtt.Reactive`** `0.1.2` — declarative MQTT topic interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Mqtt.Reactive`** `0.1.4` �?declarative MQTT topic interface proxies returning `IObservable<T>`.
 
 ## Run
 
@@ -17,6 +17,6 @@ dotnet run --project Observables.Samples.Mqtt.Reactive -p:UseLocalObservables=tr
 ## What it demonstrates
 
 - `[Mqtt]` interface with `[MqttPublish]` and `[MqttSubscribe]` returning `IObservable<T>`
-- Source-generated proxy registration via module initializer (`RegistrationDemo` — no broker in CI)
+- Source-generated proxy registration via module initializer (`RegistrationDemo` �?no broker in CI)
 
-See [Observables.Docs — Mqtt](https://github.com/Skymly/Observables.Docs/blob/main/docs/mqtt.md).
+See [Observables.Docs �?Mqtt](https://github.com/Skymly/Observables.Docs/blob/main/docs/mqtt.md).

@@ -1,11 +1,11 @@
 # Observables.Samples.Nats
 
-Console sample for **`Observables.Nats.R3`** `0.1.2` (declarative Core NATS subject interface → R3 `Observable` + `NatsService.For`).
+Console sample for **`Observables.Nats.R3`** `0.1.4` (declarative Core NATS subject interface �?R3 `Observable` + `NatsService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Nats.R3" Version="0.1.2" />
+<PackageReference Include="Observables.Nats.R3" Version="0.1.4" />
 <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
 ```
 
@@ -14,7 +14,7 @@ Optional sibling **Observables** clone: `dotnet run --project Observables.Sample
 ## What it demonstrates
 
 - `[Nats]` interface with `[NatsPublish]` and `[NatsSubscribe]` (`Api/IOrderHub.cs`)
-- Source-generated proxy registration via module initializer (`RegistrationDemo` — no server in CI)
+- Source-generated proxy registration via module initializer (`RegistrationDemo` �?no server in CI)
 
 ## Live NATS server (local only)
 
