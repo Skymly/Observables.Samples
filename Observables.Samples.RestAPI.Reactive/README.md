@@ -1,6 +1,6 @@
 # Observables.Samples.RestAPI.Reactive
 
-Console sample for **`Observables.RestAPI.Reactive`** `0.1.5` �?declarative HTTP interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.RestAPI.Reactive`** `0.1.6-preview1` �?declarative HTTP interface proxies returning `IObservable<T>`.
 
 ## Run
 

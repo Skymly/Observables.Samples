@@ -1,6 +1,6 @@
 # Observables.Samples.WebSocket.Reactive
 
-Console sample for **`Observables.WebSocket.Reactive`** `0.1.5` �?declarative `[WebSocket]` interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.WebSocket.Reactive`** `0.1.6-preview1` �?declarative `[WebSocket]` interface proxies returning `IObservable<T>`.
 
 ## Run
 

@@ -18,7 +18,7 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `ObservablesPackageVersion` | `0.1.5` | NuGet version for all Observables meta-packages |
+| `ObservablesPackageVersion` | `0.1.6-preview1` | NuGet version for all Observables meta-packages |
 | `UseLocalObservables` | `false` | `true` �?sibling `ProjectReference` analyzers |
 | `ObservablesRepoRoot` | `../Observables` (absolute) | Path to the generator repository |
 | `ObservablesSampleKind` | per sample csproj | `Events`, `RestAPI`, `SignalR`, `Mqtt`, �?�?selects `Directory.Build.targets` wiring |
@@ -38,4 +38,4 @@ dotnet build -p:UseLocalObservables=true Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-Published packages: [Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.5) and the other **16** Observables meta-packages at **`0.1.5`** on nuget.org.
+Published packages: [Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.6-preview1) and the other **16** Observables meta-packages at **`0.1.6-preview1`** on nuget.org.

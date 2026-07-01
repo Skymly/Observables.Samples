@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Reference mode: local ../Observables Mqtt runtime + Reactive generator";
 #else
-        return "Package mode: Observables.Mqtt.Reactive 0.1.5 (nuget.org)";
+        return "Package mode: Observables.Mqtt.Reactive 0.1.6-preview1 (nuget.org)";
 #endif
     }
 }
