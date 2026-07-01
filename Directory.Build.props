@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ObservablesPackageVersion>0.1.4</ObservablesPackageVersion>
+    <ObservablesPackageVersion>0.1.5</ObservablesPackageVersion>
 
     <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>

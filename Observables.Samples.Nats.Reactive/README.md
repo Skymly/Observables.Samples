@@ -1,11 +1,11 @@
 # Observables.Samples.Nats.Reactive
 
-Console sample for **`Observables.Nats.Reactive`** `0.1.4` �?declarative Core NATS subject interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Nats.Reactive`** `0.1.5` �?declarative Core NATS subject interface proxies returning `IObservable<T>`.
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Nats.Reactive" Version="0.1.4" />
+<PackageReference Include="Observables.Nats.Reactive" Version="0.1.5" />
 ```
 
 ## What it demonstrates

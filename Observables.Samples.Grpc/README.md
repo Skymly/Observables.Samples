@@ -1,11 +1,11 @@
 # Observables.Samples.Grpc
 
-Console sample for **`Observables.Grpc.R3`** `0.1.4` (declarative gRPC interface -> R3 `Observable` + `GrpcService.For`).
+Console sample for **`Observables.Grpc.R3`** `0.1.5` (declarative gRPC interface -> R3 `Observable` + `GrpcService.For`).
 
 ## NuGet
 
 ```xml
-<PackageReference Include="Observables.Grpc.R3" Version="0.1.4" />
+<PackageReference Include="Observables.Grpc.R3" Version="0.1.5" />
 <PackageReference Include="R3" Version="1.3.0" />
 <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
 ```

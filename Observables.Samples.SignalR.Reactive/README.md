@@ -1,6 +1,6 @@
 # Observables.Samples.SignalR.Reactive
 
-Console sample for **`Observables.SignalR.Reactive`** `0.1.4` �?declarative hub interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.SignalR.Reactive`** `0.1.5` �?declarative hub interface proxies returning `IObservable<T>`.
 
 ## Run
 
