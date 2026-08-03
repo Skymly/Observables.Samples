@@ -34,6 +34,8 @@ sealed class Build : NukeBuild
         ("Observables.Samples.Sse.Reactive/Observables.Samples.Sse.Reactive.csproj", true),
         ("Observables.Samples.Nats/Observables.Samples.Nats.csproj", true),
         ("Observables.Samples.Nats.Reactive/Observables.Samples.Nats.Reactive.csproj", true),
+        ("Observables.Samples.Postgres/Observables.Samples.Postgres.csproj", true),
+        ("Observables.Samples.Postgres.Reactive/Observables.Samples.Postgres.Reactive.csproj", true),
         ("Observables.Samples.Events.Routed/Observables.Samples.Events.Routed.csproj", false),
     ];
 

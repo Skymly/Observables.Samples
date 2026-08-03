@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.6`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.6) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, and Nats).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.7`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.7) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, and Postgres).
 
 | Package | Sample project |
 |---------|----------------|
@@ -21,6 +21,8 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.Sse.Reactive` | **Observables.Samples.Sse.Reactive** |
 | `Observables.Nats.R3` | **Observables.Samples.Nats** |
 | `Observables.Nats.Reactive` | **Observables.Samples.Nats.Reactive** |
+| `Observables.Postgres.R3` | **Observables.Samples.Postgres** |
+| `Observables.Postgres.Reactive` | **Observables.Samples.Postgres.Reactive** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -48,6 +50,8 @@ dotnet run --project Observables.Samples.Sse
 dotnet run --project Observables.Samples.Sse.Reactive
 dotnet run --project Observables.Samples.Nats
 dotnet run --project Observables.Samples.Nats.Reactive
+dotnet run --project Observables.Samples.Postgres
+dotnet run --project Observables.Samples.Postgres.Reactive
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -55,7 +59,7 @@ dotnet run --project Observables.Samples.Events.Routed
 
 CI uses Nuke: `./build.cmd Ci` (builds and runs console samples; **skips** `Observables.Samples.Events.Routed` on GitHub Actions).
 
-`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.6`** and `UseLocalObservables=false` by default.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.7`** and `UseLocalObservables=false` by default.
 
 ## Local Observables repo (optional)
 
@@ -89,6 +93,8 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.Sse.Reactive** | `[Sse]` IObservable proxy registration check (no live server in CI) |
 | **Observables.Samples.Nats** | `[Nats]` subject proxy registration check (no server in CI) - see project `README.md` |
 | **Observables.Samples.Nats.Reactive** | `[Nats]` IObservable proxy registration check (no server in CI) |
+| **Observables.Samples.Postgres** | `[Postgres]` LISTEN/NOTIFY proxy registration check (no server in CI) - see project `README.md` |
+| **Observables.Samples.Postgres.Reactive** | `[Postgres]` IObservable LISTEN/NOTIFY proxy registration check (no server in CI) |
 
 ## Documentation
 

@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ObservablesPackageVersion>0.1.6</ObservablesPackageVersion>
+    <ObservablesPackageVersion>0.1.7</ObservablesPackageVersion>
 
     <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
@@ -38,5 +38,9 @@
     <ObservablesNatsR3Generator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.R3.SourceGenerators/Observables.Nats.R3.SourceGenerators.csproj</ObservablesNatsR3Generator>
     <ObservablesNatsReactiveRuntime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive/Observables.Nats.Reactive.csproj</ObservablesNatsReactiveRuntime>
     <ObservablesNatsReactiveGenerator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive.SourceGenerators/Observables.Nats.Reactive.SourceGenerators.csproj</ObservablesNatsReactiveGenerator>
+    <ObservablesPostgresRuntime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres/Observables.Postgres.csproj</ObservablesPostgresRuntime>
+    <ObservablesPostgresR3Generator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.R3.SourceGenerators/Observables.Postgres.R3.SourceGenerators.csproj</ObservablesPostgresR3Generator>
+    <ObservablesPostgresReactiveRuntime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive/Observables.Postgres.Reactive.csproj</ObservablesPostgresReactiveRuntime>
+    <ObservablesPostgresReactiveGenerator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive.SourceGenerators/Observables.Postgres.Reactive.SourceGenerators.csproj</ObservablesPostgresReactiveGenerator>
   </PropertyGroup>
 </Project>
