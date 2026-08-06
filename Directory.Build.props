@@ -42,5 +42,7 @@
     <ObservablesPostgresR3Generator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.R3.SourceGenerators/Observables.Postgres.R3.SourceGenerators.csproj</ObservablesPostgresR3Generator>
     <ObservablesPostgresReactiveRuntime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive/Observables.Postgres.Reactive.csproj</ObservablesPostgresReactiveRuntime>
     <ObservablesPostgresReactiveGenerator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive.SourceGenerators/Observables.Postgres.Reactive.SourceGenerators.csproj</ObservablesPostgresReactiveGenerator>
+    <ObservablesRedisRuntime>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis/Observables.Redis.csproj</ObservablesRedisRuntime>
+    <ObservablesRedisR3Generator>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis.R3.SourceGenerators/Observables.Redis.R3.SourceGenerators.csproj</ObservablesRedisR3Generator>
   </PropertyGroup>
 </Project>
