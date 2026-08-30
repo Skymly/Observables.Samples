@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.1.7`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.7) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, and Postgres), plus **`Observables.Redis.R3` `0.1.9`**.
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.2.1`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.2.1) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, Postgres, and Redis).
 
 | Package | Sample project |
 |---------|----------------|
@@ -23,7 +23,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.Nats.Reactive` | **Observables.Samples.Nats.Reactive** |
 | `Observables.Postgres.R3` | **Observables.Samples.Postgres** |
 | `Observables.Postgres.Reactive` | **Observables.Samples.Postgres.Reactive** |
-| `Observables.Redis.R3` (`0.1.9`) | **Observables.Samples.Redis** |
+| `Observables.Redis.R3` | **Observables.Samples.Redis** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -61,7 +61,7 @@ dotnet run --project Observables.Samples.Events.Routed
 
 CI uses Nuke: `./build.cmd Ci` (builds and runs console samples; **skips** `Observables.Samples.Events.Routed` on GitHub Actions).
 
-`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.1.7`** and `UseLocalObservables=false` by default. The Redis sample references **`Observables.Redis.R3` `0.1.9`**.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.2.1`** and `UseLocalObservables=false` by default.
 
 ## Local Observables repo (optional)
 

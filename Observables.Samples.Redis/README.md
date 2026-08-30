@@ -1,13 +1,13 @@
 # Observables.Samples.Redis
 
-Console sample for **`Observables.Redis.R3`** `0.1.9` (declarative Redis Pub/Sub interface → R3 `Observable` + `RedisService.For`).
+Console sample for **`Observables.Redis.R3`** `0.2.1` (declarative Redis Pub/Sub interface → R3 `Observable` + `RedisService.For`).
 
 Library PRD: [Skymly/Observables#169](https://github.com/Skymly/Observables/issues/169).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Redis.R3" Version="0.1.9" />
+<PackageReference Include="Observables.Redis.R3" Version="0.2.1" />
 <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
 ```
 
