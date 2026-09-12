@@ -2,26 +2,52 @@
 
 ## Layout
 
-Clone both repositories as siblings under the **Observables** project folder when hacking generators:
+Clone the generator repo and this samples repo as **siblings**. `Directory.Build.props` resolves `ObservablesRepoRoot` to `../Observables`:
 
 ```
-<workspace-root>/
-  Skymly/
-    Observables/
-      Observables/
-      Observables.Samples/    �?this repo
+<parent>/
+  Observables/            # generator repository (Observables.slnx)
+  Observables.Samples/    # this repository
 ```
 
-Paths in `Directory.Build.props` assume the **Observables** folder layout (`Observables.<Feature>/…`).
+Paths assume the Observables repo folder layout (`Observables.<Feature>/…`).
 
 ## MSBuild properties
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `ObservablesPackageVersion` | `0.1.6` | NuGet version for all Observables meta-packages |
-| `UseLocalObservables` | `false` | `true` �?sibling `ProjectReference` analyzers |
-| `ObservablesRepoRoot` | `../Observables` (absolute) | Path to the generator repository |
-| `ObservablesSampleKind` | per sample csproj | `Events`, `RestAPI`, `SignalR`, `Mqtt`, �?�?selects `Directory.Build.targets` wiring |
+| `ObservablesPackageVersion` | see `Directory.Build.props` (currently `0.2.1`) | NuGet version for all Observables meta-packages when `UseLocalObservables` is false |
+| `UseLocalObservables` | `false` | `true` → sibling `ProjectReference` analyzers and runtimes |
+| `ObservablesRepoRoot` | `../Observables` (made absolute) | Path to the generator repository |
+| `ObservablesSampleKind` | per sample csproj | Selects `Directory.Build.targets` wiring |
+
+Do not change the CI default `UseLocalObservables=false`. Local generator hacking uses `-p:UseLocalObservables=true`.
+
+## Sample kinds
+
+`ObservablesSampleKind` values wired in `Directory.Build.targets`:
+
+| Kind | Sample project |
+|------|----------------|
+| `Events` | Events, Events.Routed |
+| `EventsReactive` | Events.Reactive |
+| `RestAPI` | RestAPI |
+| `RestAPIReactive` | RestAPI.Reactive |
+| `SignalR` | SignalR |
+| `SignalRReactive` | SignalR.Reactive |
+| `Mqtt` | Mqtt |
+| `MqttReactive` | Mqtt.Reactive |
+| `WebSocket` | WebSocket |
+| `WebSocketReactive` | WebSocket.Reactive |
+| `Grpc` | Grpc |
+| `GrpcReactive` | Grpc.Reactive |
+| `Sse` | Sse |
+| `SseReactive` | Sse.Reactive |
+| `Nats` | Nats |
+| `NatsReactive` | Nats.Reactive |
+| `Postgres` | Postgres |
+| `PostgresReactive` | Postgres.Reactive |
+| `Redis` | Redis |
 
 ## Commands
 
@@ -29,13 +55,10 @@ Paths in `Directory.Build.props` assume the **Observables** folder layout (`Obse
 # NuGet packages (default, no sibling clone required)
 dotnet build Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events
-dotnet run --project Observables.Samples.RestAPI
-dotnet run --project Observables.Samples.SignalR
-dotnet run --project Observables.Samples.Mqtt -p:UseLocalObservables=true
 
 # Sibling Observables repo
 dotnet build -p:UseLocalObservables=true Observables.Samples.slnx
 dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-Published packages: [Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.6) and the other **16** Observables meta-packages at **`0.1.6`** on nuget.org.
+Published packages follow `ObservablesPackageVersion` in `Directory.Build.props`.
