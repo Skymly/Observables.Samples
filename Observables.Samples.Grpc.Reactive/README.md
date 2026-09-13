@@ -1,6 +1,6 @@
 # Observables.Samples.Grpc.Reactive
 
-Console sample for **`Observables.Grpc.Reactive`** `0.1.6` �?declarative gRPC interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Grpc.Reactive`** `0.2.2` �?declarative gRPC interface proxies returning `IObservable<T>`.
 
 ## Run
 
