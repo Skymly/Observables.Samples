@@ -24,6 +24,7 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.Postgres.R3` | **Observables.Samples.Postgres** |
 | `Observables.Postgres.Reactive` | **Observables.Samples.Postgres.Reactive** |
 | `Observables.Redis.R3` | **Observables.Samples.Redis** |
+| `Observables.Redis.Reactive` | **Observables.Samples.Redis.Reactive** |
 
 Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
@@ -54,6 +55,7 @@ dotnet run --project Observables.Samples.Nats.Reactive
 dotnet run --project Observables.Samples.Postgres
 dotnet run --project Observables.Samples.Postgres.Reactive
 dotnet run --project Observables.Samples.Redis
+dotnet run --project Observables.Samples.Redis.Reactive
 
 # Avalonia routed events (requires GUI; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
@@ -98,6 +100,7 @@ Requires `../Observables/Observables.slnx`. See **`build/README-LocalSourceGener
 | **Observables.Samples.Postgres** | `[Postgres]` LISTEN/NOTIFY proxy registration check (no server in CI) - see project `README.md` |
 | **Observables.Samples.Postgres.Reactive** | `[Postgres]` IObservable LISTEN/NOTIFY proxy registration check (no server in CI) |
 | **Observables.Samples.Redis** | `[Redis]` Pub/Sub proxy registration check (no server in CI) - see project `README.md` |
+| **Observables.Samples.Redis.Reactive** | `[Redis]` IObservable Pub/Sub proxy registration check (no server in CI) |
 
 ## Documentation
 

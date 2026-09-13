@@ -29,6 +29,7 @@
     <Project Path="Observables.Samples.Postgres/Observables.Samples.Postgres.csproj" />
     <Project Path="Observables.Samples.Postgres.Reactive/Observables.Samples.Postgres.Reactive.csproj" />
     <Project Path="Observables.Samples.Redis/Observables.Samples.Redis.csproj" />
+    <Project Path="Observables.Samples.Redis.Reactive/Observables.Samples.Redis.Reactive.csproj" />
   </Folder>
   <Folder Name="/Build/">
     <Project Path="build/_build.csproj" />
