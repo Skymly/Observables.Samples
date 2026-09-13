@@ -16,7 +16,7 @@ Paths assume the Observables repo folder layout (`Observables.<Feature>/…`).
 
 | Property | Default | Meaning |
 |----------|---------|---------|
-| `ObservablesPackageVersion` | see `Directory.Build.props` (currently `0.2.1`) | NuGet version for all Observables meta-packages when `UseLocalObservables` is false |
+| `ObservablesPackageVersion` | see `Directory.Build.props` (currently `0.2.2`) | NuGet version for all Observables meta-packages when `UseLocalObservables` is false |
 | `UseLocalObservables` | `false` | `true` → sibling `ProjectReference` analyzers and runtimes |
 | `ObservablesRepoRoot` | `../Observables` (made absolute) | Path to the generator repository |
 | `ObservablesSampleKind` | per sample csproj | Selects `Directory.Build.targets` wiring |
