@@ -9,10 +9,6 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Events'">
     <Using Include="Observables.Events.R3" />
-    <ProjectReference Include="$(ObservablesSharedProject)">
-      <OutputItemType>Analyzer</OutputItemType>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="$(ObservablesEventsR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -50,10 +46,6 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'EventsReactive'">
     <Using Include="Observables.Events.Reactive" />
-    <ProjectReference Include="$(ObservablesSharedProject)">
-      <OutputItemType>Analyzer</OutputItemType>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="$(ObservablesEventsReactiveGenerator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
