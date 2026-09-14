@@ -48,6 +48,7 @@ Do not change the CI default `UseLocalObservables=false`. Local generator hackin
 | `Postgres` | Postgres |
 | `PostgresReactive` | Postgres.Reactive |
 | `Redis` | Redis |
+| `RedisReactive` | Redis.Reactive |
 
 ## Commands
 
