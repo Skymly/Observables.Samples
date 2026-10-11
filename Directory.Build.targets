@@ -1,4 +1,9 @@
 <Project>
+  <!-- Local mode does not get the nupkg buildTransitive props; import the source-tree copy so
+       ObservableRoutedEvents / UseWPF stay compiler-visible for the Events generators. -->
+  <Import Project="$(ObservablesRepoRoot)/Observables.Events/Observables.Events/targets/observables.events.props"
+          Condition="'$(UseLocalObservables)' == 'true' and $(ObservablesSampleKind.StartsWith('Events'))" />
+
   <PropertyGroup Condition="'$(UseLocalObservables)' == 'true'">
     <DefineConstants>$(DefineConstants);LOCAL_OBSERVABLES</DefineConstants>
   </PropertyGroup>
@@ -87,6 +92,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'SignalR'">
     <ProjectReference Include="$(ObservablesSignalRRuntime)" />
+    <ProjectReference Include="$(ObservablesSignalRR3Runtime)" />
     <ProjectReference Include="$(ObservablesSignalRR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -103,6 +109,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Mqtt'">
     <ProjectReference Include="$(ObservablesMqttRuntime)" />
+    <ProjectReference Include="$(ObservablesMqttR3Runtime)" />
     <ProjectReference Include="$(ObservablesMqttR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -118,6 +125,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'WebSocket'">
     <ProjectReference Include="$(ObservablesWebSocketRuntime)" />
+    <ProjectReference Include="$(ObservablesWebSocketR3Runtime)" />
     <ProjectReference Include="$(ObservablesWebSocketR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -133,6 +141,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Grpc'">
     <ProjectReference Include="$(ObservablesGrpcRuntime)" />
+    <ProjectReference Include="$(ObservablesGrpcR3Runtime)" />
     <ProjectReference Include="$(ObservablesGrpcR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -214,6 +223,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Sse'">
     <ProjectReference Include="$(ObservablesSseRuntime)" />
+    <ProjectReference Include="$(ObservablesSseR3Runtime)" />
     <ProjectReference Include="$(ObservablesSseR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -244,6 +254,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Nats'">
     <ProjectReference Include="$(ObservablesNatsRuntime)" />
+    <ProjectReference Include="$(ObservablesNatsR3Runtime)" />
     <ProjectReference Include="$(ObservablesNatsR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -277,6 +288,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Postgres'">
     <ProjectReference Include="$(ObservablesPostgresRuntime)" />
+    <ProjectReference Include="$(ObservablesPostgresR3Runtime)" />
     <ProjectReference Include="$(ObservablesPostgresR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -315,6 +327,7 @@
 
   <ItemGroup Condition="'$(UseLocalObservables)' == 'true' and '$(ObservablesSampleKind)' == 'Redis'">
     <ProjectReference Include="$(ObservablesRedisRuntime)" />
+    <ProjectReference Include="$(ObservablesRedisR3Runtime)" />
     <ProjectReference Include="$(ObservablesRedisR3Generator)">
       <OutputItemType>Analyzer</OutputItemType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

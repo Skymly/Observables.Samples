@@ -14,34 +14,42 @@
     <ObservablesRestApiR3Generator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.R3.SourceGenerators/Observables.RestAPI.R3.SourceGenerators.csproj</ObservablesRestApiR3Generator>
     <ObservablesRestApiReactiveGenerator>$(ObservablesRepoRoot)/Observables.RestAPI/Observables.RestAPI.Reactive.SourceGenerators/Observables.RestAPI.Reactive.SourceGenerators.csproj</ObservablesRestApiReactiveGenerator>
     <ObservablesSignalRRuntime>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR/Observables.SignalR.csproj</ObservablesSignalRRuntime>
+    <ObservablesSignalRR3Runtime>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.R3/Observables.SignalR.R3.csproj</ObservablesSignalRR3Runtime>
     <ObservablesSignalRR3Generator>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.R3.SourceGenerators/Observables.SignalR.R3.SourceGenerators.csproj</ObservablesSignalRR3Generator>
     <ObservablesSignalRReactiveRuntime>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.Reactive/Observables.SignalR.Reactive.csproj</ObservablesSignalRReactiveRuntime>
     <ObservablesSignalRReactiveGenerator>$(ObservablesRepoRoot)/Observables.SignalR/Observables.SignalR.Reactive.SourceGenerators/Observables.SignalR.Reactive.SourceGenerators.csproj</ObservablesSignalRReactiveGenerator>
     <ObservablesMqttRuntime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt/Observables.Mqtt.csproj</ObservablesMqttRuntime>
+    <ObservablesMqttR3Runtime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.R3/Observables.Mqtt.R3.csproj</ObservablesMqttR3Runtime>
     <ObservablesMqttR3Generator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.R3.SourceGenerators/Observables.Mqtt.R3.SourceGenerators.csproj</ObservablesMqttR3Generator>
     <ObservablesMqttReactiveRuntime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.Reactive/Observables.Mqtt.Reactive.csproj</ObservablesMqttReactiveRuntime>
     <ObservablesMqttReactiveGenerator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.Reactive.SourceGenerators/Observables.Mqtt.Reactive.SourceGenerators.csproj</ObservablesMqttReactiveGenerator>
     <ObservablesWebSocketRuntime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket/Observables.WebSocket.csproj</ObservablesWebSocketRuntime>
+    <ObservablesWebSocketR3Runtime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.R3/Observables.WebSocket.R3.csproj</ObservablesWebSocketR3Runtime>
     <ObservablesWebSocketR3Generator>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.R3.SourceGenerators/Observables.WebSocket.R3.SourceGenerators.csproj</ObservablesWebSocketR3Generator>
     <ObservablesWebSocketReactiveRuntime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.Reactive/Observables.WebSocket.Reactive.csproj</ObservablesWebSocketReactiveRuntime>
     <ObservablesWebSocketReactiveGenerator>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.Reactive.SourceGenerators/Observables.WebSocket.Reactive.SourceGenerators.csproj</ObservablesWebSocketReactiveGenerator>
     <ObservablesGrpcRuntime>$(ObservablesRepoRoot)/Observables.Grpc/Observables.Grpc/Observables.Grpc.csproj</ObservablesGrpcRuntime>
+    <ObservablesGrpcR3Runtime>$(ObservablesRepoRoot)/Observables.Grpc/Observables.Grpc.R3/Observables.Grpc.R3.csproj</ObservablesGrpcR3Runtime>
     <ObservablesGrpcR3Generator>$(ObservablesRepoRoot)/Observables.Grpc/Observables.Grpc.R3.SourceGenerators/Observables.Grpc.R3.SourceGenerators.csproj</ObservablesGrpcR3Generator>
     <ObservablesGrpcReactiveRuntime>$(ObservablesRepoRoot)/Observables.Grpc/Observables.Grpc.Reactive/Observables.Grpc.Reactive.csproj</ObservablesGrpcReactiveRuntime>
     <ObservablesGrpcReactiveGenerator>$(ObservablesRepoRoot)/Observables.Grpc/Observables.Grpc.Reactive.SourceGenerators/Observables.Grpc.Reactive.SourceGenerators.csproj</ObservablesGrpcReactiveGenerator>
     <ObservablesSseRuntime>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse/Observables.Sse.csproj</ObservablesSseRuntime>
+    <ObservablesSseR3Runtime>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.R3/Observables.Sse.R3.csproj</ObservablesSseR3Runtime>
     <ObservablesSseR3Generator>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.R3.SourceGenerators/Observables.Sse.R3.SourceGenerators.csproj</ObservablesSseR3Generator>
     <ObservablesSseReactiveRuntime>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.Reactive/Observables.Sse.Reactive.csproj</ObservablesSseReactiveRuntime>
     <ObservablesSseReactiveGenerator>$(ObservablesRepoRoot)/Observables.Sse/Observables.Sse.Reactive.SourceGenerators/Observables.Sse.Reactive.SourceGenerators.csproj</ObservablesSseReactiveGenerator>
     <ObservablesNatsRuntime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats/Observables.Nats.csproj</ObservablesNatsRuntime>
+    <ObservablesNatsR3Runtime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.R3/Observables.Nats.R3.csproj</ObservablesNatsR3Runtime>
     <ObservablesNatsR3Generator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.R3.SourceGenerators/Observables.Nats.R3.SourceGenerators.csproj</ObservablesNatsR3Generator>
     <ObservablesNatsReactiveRuntime>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive/Observables.Nats.Reactive.csproj</ObservablesNatsReactiveRuntime>
     <ObservablesNatsReactiveGenerator>$(ObservablesRepoRoot)/Observables.Nats/Observables.Nats.Reactive.SourceGenerators/Observables.Nats.Reactive.SourceGenerators.csproj</ObservablesNatsReactiveGenerator>
     <ObservablesPostgresRuntime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres/Observables.Postgres.csproj</ObservablesPostgresRuntime>
+    <ObservablesPostgresR3Runtime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.R3/Observables.Postgres.R3.csproj</ObservablesPostgresR3Runtime>
     <ObservablesPostgresR3Generator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.R3.SourceGenerators/Observables.Postgres.R3.SourceGenerators.csproj</ObservablesPostgresR3Generator>
     <ObservablesPostgresReactiveRuntime>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive/Observables.Postgres.Reactive.csproj</ObservablesPostgresReactiveRuntime>
     <ObservablesPostgresReactiveGenerator>$(ObservablesRepoRoot)/Observables.Postgres/Observables.Postgres.Reactive.SourceGenerators/Observables.Postgres.Reactive.SourceGenerators.csproj</ObservablesPostgresReactiveGenerator>
     <ObservablesRedisRuntime>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis/Observables.Redis.csproj</ObservablesRedisRuntime>
+    <ObservablesRedisR3Runtime>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis.R3/Observables.Redis.R3.csproj</ObservablesRedisR3Runtime>
     <ObservablesRedisR3Generator>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis.R3.SourceGenerators/Observables.Redis.R3.SourceGenerators.csproj</ObservablesRedisR3Generator>
     <ObservablesRedisReactiveRuntime>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis.Reactive/Observables.Redis.Reactive.csproj</ObservablesRedisReactiveRuntime>
     <ObservablesRedisReactiveGenerator>$(ObservablesRepoRoot)/Observables.Redis/Observables.Redis.Reactive.SourceGenerators/Observables.Redis.Reactive.SourceGenerators.csproj</ObservablesRedisReactiveGenerator>
