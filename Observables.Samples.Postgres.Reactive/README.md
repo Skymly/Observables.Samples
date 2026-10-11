@@ -1,11 +1,11 @@
 # Observables.Samples.Postgres.Reactive
 
-Console sample for **`Observables.Postgres.Reactive`** `0.2.2` — declarative PostgreSQL LISTEN/NOTIFY interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Postgres.Reactive`** `0.3.1` — declarative PostgreSQL LISTEN/NOTIFY interface proxies returning `IObservable<T>`.
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Postgres.Reactive" Version="0.2.2" />
+<PackageReference Include="Observables.Postgres.Reactive" Version="0.3.1" />
 <PackageReference Include="Npgsql" Version="10.0.3" />
 ```
 
