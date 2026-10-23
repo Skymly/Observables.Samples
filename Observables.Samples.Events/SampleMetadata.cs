@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Reference mode: local ../Observables source generators";
 #else
-        return "Package mode: Observables.Events.R3 0.3.1 (nuget.org)";
+        return "Package mode: Observables.Events.R3 0.4.0 (nuget.org)";
 #endif
     }
 }

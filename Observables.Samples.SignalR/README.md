@@ -1,11 +1,11 @@
 # Observables.Samples.SignalR
 
-Console sample for **`Observables.SignalR.R3`** `0.3.1` (declarative hub interface �?R3 `Observable` + `HubService.For`).
+Console sample for **`Observables.SignalR.R3`** `0.4.0` (declarative hub interface �?R3 `Observable` + `HubService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.3.1" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.4.0" />
 ```
 
 ## What it demonstrates

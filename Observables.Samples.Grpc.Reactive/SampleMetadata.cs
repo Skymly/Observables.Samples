@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Reference mode: local ../Observables Grpc runtime + Reactive generator";
 #else
-        return "Package mode: Observables.Grpc.Reactive 0.3.1 (nuget.org)";
+        return "Package mode: Observables.Grpc.Reactive 0.4.0 (nuget.org)";
 #endif
     }
 }
