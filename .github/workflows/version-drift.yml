@@ -76,3 +76,4 @@ jobs:
           }
           if ($LASTEXITCODE -gt 1) { throw "git grep failed (exit $LASTEXITCODE)." }
           Write-Host 'No stale version literals found.'
+          exit 0
