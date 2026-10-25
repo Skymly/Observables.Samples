@@ -7,7 +7,7 @@ internal static class SampleMetadata
 #if LOCAL_OBSERVABLES
         return "Reference mode: local ../Observables RestAPI runtime + R3 generator";
 #else
-        return "Package mode: Observables.RestAPI.R3 0.4.0 (nuget.org)";
+        return "Package mode: Observables.RestAPI.R3 0.4.1 (nuget.org)";
 #endif
     }
 }

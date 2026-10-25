@@ -1,6 +1,6 @@
 # Observables.Samples.Events.Reactive
 
-Console sample for **`Observables.Events.Reactive`** `0.4.0` �?classic CLR events to `IObservable<T>`.
+Console sample for **`Observables.Events.Reactive`** `0.4.1` �?classic CLR events to `IObservable<T>`.
 
 ## Run
 

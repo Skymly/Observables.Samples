@@ -1,11 +1,11 @@
 # Observables.Samples.Postgres
 
-Console sample for **`Observables.Postgres.R3`** `0.4.0` (declarative PostgreSQL LISTEN/NOTIFY interface → R3 `Observable` + `PostgresService.For`).
+Console sample for **`Observables.Postgres.R3`** `0.4.1` (declarative PostgreSQL LISTEN/NOTIFY interface → R3 `Observable` + `PostgresService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Postgres.R3" Version="0.4.0" />
+<PackageReference Include="Observables.Postgres.R3" Version="0.4.1" />
 <PackageReference Include="Npgsql" Version="10.0.3" />
 ```
 

@@ -1,6 +1,6 @@
 # Observables.Samples.Mqtt.Reactive
 
-Console sample for **`Observables.Mqtt.Reactive`** `0.4.0` �?declarative MQTT topic interface proxies returning `IObservable<T>`.
+Console sample for **`Observables.Mqtt.Reactive`** `0.4.1` �?declarative MQTT topic interface proxies returning `IObservable<T>`.
 
 ## Run
 

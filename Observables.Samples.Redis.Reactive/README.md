@@ -1,11 +1,11 @@
 # Observables.Samples.Redis.Reactive
 
-Console sample for **`Observables.Redis.Reactive`** `0.4.0` (declarative Redis Pub/Sub interface → `IObservable` + `RedisService.For`).
+Console sample for **`Observables.Redis.Reactive`** `0.4.1` (declarative Redis Pub/Sub interface → `IObservable` + `RedisService.For`).
 
 ## Package reference (default)
 
 ```xml
-<PackageReference Include="Observables.Redis.Reactive" Version="0.4.0" />
+<PackageReference Include="Observables.Redis.Reactive" Version="0.4.1" />
 <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
 ```
 

@@ -1,6 +1,6 @@
 # Observables.Samples
 
-Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.4.0`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.4.0) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, Postgres, and Redis).
+Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.4.1`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.4.1) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, Postgres, and Redis).
 
 | Package | Sample project |
 |---------|----------------|
@@ -63,7 +63,7 @@ dotnet run --project Observables.Samples.Events.Routed
 
 CI uses Nuke: `./build.cmd Ci` (builds and runs console samples; **skips** `Observables.Samples.Events.Routed` on GitHub Actions).
 
-`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.4.0`** and `UseLocalObservables=false` by default.
+`Directory.Build.props` sets `ObservablesPackageVersion` to **`0.4.1`** and `UseLocalObservables=false` by default.
 
 ## Local Observables repo (optional)
 
