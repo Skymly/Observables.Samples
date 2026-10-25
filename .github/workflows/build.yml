@@ -20,7 +20,6 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Wait for Observables packages on nuget.org
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           VERSION=$(grep -oP '(?<=<ObservablesPackageVersion>)[^<]+' Directory.Build.props)
           PACKAGE=observables.events.r3
