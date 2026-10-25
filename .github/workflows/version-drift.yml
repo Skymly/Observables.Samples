@@ -1,0 +1,79 @@
+name: Version drift
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assert referenced version matches latest stable on nuget.org
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $ProgressPreference = 'SilentlyContinue'
+          $indexUrl = 'https://api.nuget.org/v3-flatcontainer/observables.events.r3/index.json'
+
+          $source = Get-Content -Raw 'Directory.Build.props'
+          $referenced = [regex]::Match($source, '<ObservablesPackageVersion>([^<]+)</ObservablesPackageVersion>').Groups[1].Value
+          if (-not $referenced) { throw 'Could not read ObservablesPackageVersion from Directory.Build.props.' }
+
+          # Poll until the referenced version is indexed: a sync PR opened
+          # right after a release can land before nuget.org catches up.
+          $versions = @()
+          for ($attempt = 1; $attempt -le 20; $attempt++) {
+              $versions = @((Invoke-RestMethod $indexUrl).versions)
+              if ($versions -contains $referenced) { break }
+              if ($attempt -eq 20) {
+                  throw "Referenced version $referenced is not listed on nuget.org after polling."
+              }
+              Write-Host "Waiting for $referenced to appear on nuget.org (attempt $attempt/20)..."
+              Start-Sleep -Seconds 30
+          }
+
+          $latestStable = @($versions | Where-Object { $_ -notmatch '-' })[-1]
+          if ($referenced -ne $latestStable) {
+              throw "Referenced version $referenced does not match latest stable $latestStable on nuget.org. Run: pwsh scripts/sync-observables-version.ps1 -Version $latestStable"
+          }
+          Write-Host "Referenced version $referenced == latest stable on nuget.org."
+
+      - name: Scan for stale stable-version literals
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $ProgressPreference = 'SilentlyContinue'
+          $indexUrl = 'https://api.nuget.org/v3-flatcontainer/observables.events.r3/index.json'
+          $versions = @((Invoke-RestMethod $indexUrl).versions)
+
+          $source = Get-Content -Raw 'Directory.Build.props'
+          $referenced = [regex]::Match($source, '<ObservablesPackageVersion>([^<]+)</ObservablesPackageVersion>').Groups[1].Value
+
+          # Any released *stable* version other than the referenced one is a
+          # leftover literal. Boundaries exclude previews (0.1.0-preview7),
+          # v-prefixed tags (v0.3.0) and longer numbers (10.1.0).
+          $staleStable = @($versions | Where-Object { $_ -ne $referenced -and $_ -notmatch '-' })
+          if ($staleStable.Count -eq 0) {
+              Write-Host 'No stale stable versions to scan for.'
+              exit 0
+          }
+          $alt = ($staleStable | ForEach-Object { [regex]::Escape($_) }) -join '|'
+          $pattern = "(^|[^0-9A-Za-z.])($alt)([^0-9A-Za-z.-]|$)"
+          $hits = @(git grep -nE $pattern --)
+          if ($LASTEXITCODE -eq 0) {
+              $hits | ForEach-Object { Write-Host "::error::$_" }
+              throw "Found $($hits.Count) stale version literal(s). Run: pwsh scripts/sync-observables-version.ps1 -Version $referenced"
+          }
+          if ($LASTEXITCODE -gt 1) { throw "git grep failed (exit $LASTEXITCODE)." }
+          Write-Host 'No stale version literals found.'
+          exit 0

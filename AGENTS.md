@@ -17,6 +17,12 @@ This repository contains **sample apps only**. Do not add source generators or l
 - User chat: ???? (unless requested otherwise).
 - Commit messages and GitHub Issue/PR text: **English**.
 
+## Version sync
+
+- `Directory.Build.props` (`ObservablesPackageVersion`) is the single source; READMEs and `SampleMetadata.cs` carry the same literal.
+- `pwsh scripts/sync-observables-version.ps1 -Version <x.y.z>` rewrites all of them. The Observables release pipeline calls it to open a bump PR after a stable release.
+- `.github/workflows/version-drift.yml` asserts the referenced version equals the latest stable on nuget.org and scans for stale version literals.
+
 ## Git
 
 - Do not commit or push unless the user asks.
