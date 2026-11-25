@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <ObservablesPackageVersion>0.4.1</ObservablesPackageVersion>
+    <ObservablesPackageVersion>0.5.1</ObservablesPackageVersion>
 
     <!-- Default: consume published NuGet packages. Use -p:UseLocalObservables=true for sibling ../Observables. -->
     <ObservablesRepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../Observables'))</ObservablesRepoRoot>
@@ -23,6 +23,7 @@
     <ObservablesMqttR3Generator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.R3.SourceGenerators/Observables.Mqtt.R3.SourceGenerators.csproj</ObservablesMqttR3Generator>
     <ObservablesMqttReactiveRuntime>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.Reactive/Observables.Mqtt.Reactive.csproj</ObservablesMqttReactiveRuntime>
     <ObservablesMqttReactiveGenerator>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.Reactive.SourceGenerators/Observables.Mqtt.Reactive.SourceGenerators.csproj</ObservablesMqttReactiveGenerator>
+    <ObservablesMqttNet4Transport>$(ObservablesRepoRoot)/Observables.Mqtt/Observables.Mqtt.MQTTnet4/Observables.Mqtt.MQTTnet4.csproj</ObservablesMqttNet4Transport>
     <ObservablesWebSocketRuntime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket/Observables.WebSocket.csproj</ObservablesWebSocketRuntime>
     <ObservablesWebSocketR3Runtime>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.R3/Observables.WebSocket.R3.csproj</ObservablesWebSocketR3Runtime>
     <ObservablesWebSocketR3Generator>$(ObservablesRepoRoot)/Observables.WebSocket/Observables.WebSocket.R3.SourceGenerators/Observables.WebSocket.R3.SourceGenerators.csproj</ObservablesWebSocketR3Generator>

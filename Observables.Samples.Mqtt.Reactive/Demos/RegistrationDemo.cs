@@ -1,4 +1,3 @@
-using MQTTnet.Client;
 using Observables.Mqtt;
 using Observables.Samples.Mqtt.Reactive.Api;
 
@@ -14,7 +13,7 @@ internal static class RegistrationDemo
         Console.WriteLine("-- Topic proxy factory (no live broker) --");
         try
         {
-            _ = MqttService.For<ISensorTopicsReactive>((IMqttClient)null!);
+            _ = MqttService.For<ISensorTopicsReactive>((IMqttTransport)null!);
             Console.WriteLine("  unexpected: null client accepted");
         }
         catch (ArgumentNullException)
@@ -29,6 +28,6 @@ internal static class RegistrationDemo
 
         Console.WriteLine();
         Console.WriteLine(
-            "  Live publish/subscribe demos need IMqttClient connected to a broker; see README.md.");
+            "  Live publish/subscribe demos wrap an MQTTnet client with MqttNetTransport.Wrap(client); see README.md.");
     }
 }
