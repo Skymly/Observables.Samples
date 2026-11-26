@@ -17,3 +17,6 @@ artifacts/
 ## Local scratch (see ../../../AGENTS.md § `.Local`)
 .Local/
 
+# Local scratch directories
+.scratch/
+.Temp/

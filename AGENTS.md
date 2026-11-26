@@ -1,29 +1,26 @@
-# Observables.Samples �?AI agent notes
+# Observables.Samples
 
-## Scope
+Sample applications for [Skymly/Observables](https://github.com/Skymly/Observables). Generator and library changes belong in the main repository.
 
-This repository contains **sample apps only**. Do not add source generators or library code here �?change [Observables](https://github.com/Skymly/Observables) instead.
+## Build & Verify
 
-## Local development
+```powershell
+dotnet build Observables.Samples.slnx
+# Or run the CI-equivalent Nuke target (uses UseLocalObservables=false):
+./build.cmd Ci
+```
 
-- **Default**: NuGet **`ObservablesPackageVersion`** (`0.5.1`) via `Observables.Events.R3` / `Observables.RestAPI.R3` / `Observables.SignalR.R3` / `Observables.Mqtt.R3` / `Observables.WebSocket.R3` / `Observables.Grpc.R3` / `Observables.Sse.R3` / `Observables.Nats.R3` / `Observables.Postgres.R3` / `Observables.Redis.R3` / `Observables.Redis.Reactive` on nuget.org.
-- **Optional sibling**: `../Observables` with `-p:UseLocalObservables=true` for generator work.
-- Build: `dotnet build Observables.Samples.slnx` or `./build.cmd Ci` from the repo root.
-- CI uses **Nuke** `./build.cmd Ci` with **`UseLocalObservables=false`** (no Observables checkout).
-- **`Observables.Samples.Events.Routed`** (Avalonia) is **skipped on server/CI** builds; run locally with a graphical environment.
+- Local sibling development against `../Observables` uses `-p:UseLocalObservables=true`.
+- `Observables.Samples.Events.Routed` (Avalonia) is skipped on headless CI builds; run it locally with a graphical environment.
 
-## Language
+## Version Sync
 
-- User chat: ???? (unless requested otherwise).
-- Commit messages and GitHub Issue/PR text: **English**.
+- `Directory.Build.props` (`ObservablesPackageVersion`) is the single version source alongside READMEs and `SampleMetadata.cs`.
+- Run `pwsh scripts/sync-observables-version.ps1 -Version <x.y.z>` to update all version references together.
+- `.github/workflows/version-drift.yml` asserts alignment with the latest stable release on nuget.org.
+- Do not bump Observables package versions without explicit maintainer approval.
 
-## Version sync
+## Conventions
 
-- `Directory.Build.props` (`ObservablesPackageVersion`) is the single source; READMEs and `SampleMetadata.cs` carry the same literal.
-- `pwsh scripts/sync-observables-version.ps1 -Version <x.y.z>` rewrites all of them. The Observables release pipeline calls it to open a bump PR after a stable release.
-- `.github/workflows/version-drift.yml` asserts the referenced version equals the latest stable on nuget.org and scans for stale version literals.
-
-## Git
-
-- Do not commit or push unless the user asks.
-- Do not bump Observables package versions without user approval.
+- Commit messages, issues, and PR text: **English**.
+- Do not commit or push unless explicitly requested.
