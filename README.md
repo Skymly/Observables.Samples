@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md)
 
+[![Build](https://github.com/Skymly/Observables.Samples/actions/workflows/build.yml/badge.svg)](https://github.com/Skymly/Observables.Samples/actions/workflows/build.yml)
+
 Runnable sample applications for **[Skymly/Observables](https://github.com/Skymly/Observables)** using the **`0.5.1`** NuGet meta-packages on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.5.1) (Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, Sse, Nats, Postgres, and Redis).
 
 | Package | Sample project |
@@ -27,8 +29,6 @@ Runnable sample applications for **[Skymly/Observables](https://github.com/Skyml
 | `Observables.Postgres.Reactive` | **Observables.Samples.Postgres.Reactive** |
 | `Observables.Redis.R3` | **Observables.Samples.Redis** |
 | `Observables.Redis.Reactive` | **Observables.Samples.Redis.Reactive** |
-
-Preview packages: **tag + NuGet only** (no GitHub Release). See Observables `AGENTS.md`.
 
 ## Build and run (NuGet, default)
 
@@ -118,3 +118,5 @@ Canonical docs: **[Observables.Docs](https://github.com/Skymly/Observables.Docs)
 ## License
 
 MIT - see [LICENSE](LICENSE).
+
+> Note: Preview packages in the upstream repository are published by tag + NuGet without GitHub Releases.
