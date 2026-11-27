@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文** | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md)
 
+[![Build](https://github.com/Skymly/Observables.Samples/actions/workflows/build.yml/badge.svg)](https://github.com/Skymly/Observables.Samples/actions/workflows/build.yml)
+
 **[Skymly/Observables](https://github.com/Skymly/Observables)** 的可运行示例应用集，基于 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.5.1) 上 **`0.5.1`** 版本的 NuGet 元包（覆盖 Events、RestAPI、SignalR、Mqtt、WebSocket、Grpc、Sse、Nats、Postgres 与 Redis）。
 
 | 包名 | 示例项目 |
@@ -27,8 +29,6 @@
 | `Observables.Postgres.Reactive` | **Observables.Samples.Postgres.Reactive** |
 | `Observables.Redis.R3` | **Observables.Samples.Redis** |
 | `Observables.Redis.Reactive` | **Observables.Samples.Redis.Reactive** |
-
-预览版包：**仅推送 tag + NuGet**（不建 GitHub Release）。详见主仓 `AGENTS.md`。
 
 ## 构建与运行（NuGet，默认）
 
@@ -118,3 +118,5 @@ dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ## 许可证
 
 MIT — 见 [LICENSE](LICENSE)。
+
+> 说明：上游仓库的预览版包仅通过 tag + NuGet 发布，不单独创建 GitHub Release。
